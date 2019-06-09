@@ -107,3 +107,95 @@
 .link{
     text-decoration:none;
 }
+.list-no-br{
+    --inner-border-width: 0px; 
+    --border-width: 0px;// It will remove ion-list default border bottom
+}
+/*input*/
+ion-row{
+    ion-col{
+        &.col-align{
+            display:flex;
+            padding:0;
+        }
+    }
+    ion-label{
+        &.input-label{
+            align-items:center;
+            align-self:center;
+            font-size:12px;
+            padding-left:16px;
+        }
+    }
+    ion-input{
+        &.input-text{
+            height:40px;
+            color:black;
+            border:1px solid #c7c4c4;
+            border-radius:4px;
+            background:transparent;
+            box-sizing:border-box;
+            box-shadow:none;
+            width:100%;
+        }
+    }
+}
+/*Textarea*/
+ion-item.textarea-list{
+    --border-width: 0px;
+    width:100%;
+    ion-textarea{
+        &.textarea{
+            border:1px solid #c7c4c4;
+            width:100%;
+            box-shadow:none;
+            box-sizing:border-box;
+            border-radius:4px;
+            margin-top:0;
+        }
+    }
+}
+/*Radio*/
+ion-list.list-radio{
+    ion-item {
+        padding:0;
+
+        &.item{
+            --min-height:40px;
+            --inner-border-width: 0px;
+        }
+        ion-label{
+            &.radio-label{
+                margin: 5px 0;
+                font-size: 14px;
+            }
+        }
+        ion-radio{
+            &.radio{
+            margin: 5px 20px 5px 0px;
+            }
+        }
+    }
+}
+/*Checkbox*/
+ion-list.check-list{
+    ion-item {
+        padding:0;
+
+        &.item{
+            --min-height:40px;
+            --inner-border-width: 0px;
+        }
+        ion-label{
+            &.check-label{
+                margin: 5px 0;
+                font-size: 14px;
+            }
+        }
+        ion-checkbox{
+            &.checkbox{
+            margin: 5px 20px 5px 0px;
+            }
+        }
+    }
+}
