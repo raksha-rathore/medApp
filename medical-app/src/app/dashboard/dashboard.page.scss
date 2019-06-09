@@ -1,0 +1,32 @@
+.customised-card {
+    ion-col {
+        position: relative;
+    }
+
+    ion-icon {
+        zoom: 3;
+        position: absolute;
+        top: 2px;
+        left: -4px;
+        opacity: 0.4;
+        transform: skewX(-7deg);
+    }
+
+    ion-card-header {
+        --background: transparent;
+    }
+
+    ion-card-title {
+        font-size: 40px;
+    }
+
+    ion-card-subtitle {
+        font-weight: 300;
+        margin: 0;
+    }
+
+    &:hover {
+        box-shadow: 0 5px 2px -2px rgba(0,0,0,.1), 0 5px 5px 0 rgba(0,0,0,.12), 0 5px 6px 0 rgba(0,0,0,.10);
+        transition: all 0.2s ease-in;
+    }
+}
