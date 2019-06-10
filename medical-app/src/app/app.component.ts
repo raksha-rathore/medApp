@@ -55,7 +55,7 @@ export class AppComponent {
       },
       {
         title: 'Students',
-        url: '/about',
+        url: '/student-profile',
         direct: 'forward',
         icon: 'people'
       },
@@ -63,6 +63,18 @@ export class AppComponent {
       {
         title: 'Trainings',
         url: '/training',
+        direct: 'forward',
+        icon: 'medkit'
+      },
+      {
+        title: 'Present Medical History',
+        url: '/present-medical-history',
+        direct: 'forward',
+        icon: 'medkit'
+      },
+      {
+        title: 'Address Info',
+        url: '/address-info',
         direct: 'forward',
         icon: 'medkit'
       }
