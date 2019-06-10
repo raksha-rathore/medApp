@@ -6,6 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { DashboardPage } from './dashboard.page';
+import { StudentTable } from './tables/students/students.table';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { StudentService } from '../common/service/student/student.service';
 
 const routes: Routes = [
   {
@@ -19,8 +22,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    Ng2SmartTableModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [DashboardPage]
+  providers: [StudentService],
+  declarations: [DashboardPage, StudentTable]
 })
 export class DashboardPageModule {}
