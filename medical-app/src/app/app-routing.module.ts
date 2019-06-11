@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardPageModule' },
   { path: 'bmi', loadChildren: './bmi/bmi.module#BmiComponentModule' },
   { path: 'mensuration', loadChildren: './mensuration/mensuration.module#MensurationComponentModule' },
+  { path: 'medication', loadChildren: './medication/medication.module#MedicationComponentModule' },
   { path: 'family-history', loadChildren: './family-history/family-history.module#FamilyHistoryComponentModule' },
   { path: 'form', loadChildren: './form/form.module#FormPageModule' },
   { path: 'student-profile', loadChildren: './student-profile/student-profile.module#StudentProfilePageModule' },
