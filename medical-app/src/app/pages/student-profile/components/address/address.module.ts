@@ -9,7 +9,7 @@ import { AddressPage } from './address.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'address-info',
     component: AddressPage
   }
 ];
