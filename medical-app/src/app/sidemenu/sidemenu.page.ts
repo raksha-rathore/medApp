@@ -10,25 +10,43 @@ export class SidemenuPage implements OnInit {
   constructor() {
     this.appPages = [
   {
+    title: 'Dashboard',
+    url: '/dashboard',
+    direct: 'forward',
+    icon: 'home',
+  },
+  {
+    title: 'Students',
+    url: '/dashboard',
+    direct: 'forward',
+    icon: 'people',
+  },
+  {
     title: 'Trainings',
     url: '/training',
     direct: 'forward',
     icon: 'medkit',
   },
   {
-    title: 'Basic Information',
+    title: 'Student Profile',
     children: [
       {
-        title: 'Dashboard',
-        url: '/dashboard',
+        title: 'Basic Information',
+        url: '/student-profile',
         direct: 'root',
+        icon: 'add'
+      },
+      {
+        title: 'Address',
+        url: '/student-profile/address',
+        direct: 'forward',
         icon: 'home'
       },
       {
-        title: 'Students',
-        url: '/about',
+        title: 'Picture',
+        url: '/student-profile/pic-upload',
         direct: 'forward',
-        icon: 'people'
+        icon: 'reverse-camera'
       },
     ]
   },
@@ -36,16 +54,16 @@ export class SidemenuPage implements OnInit {
     title: 'Diagonisis',
     children: [
       {
-        title: 'DB1',
-        url: '/training',
+        title: 'Present Medical History',
+        url: '/diagnosis',
         direct: 'root',
-        icon: 'home'
+        icon: 'add'
       },
       {
-        title: 'Students',
-        url: '/about',
+        title: 'Anthropometric Measurement',
+        url: '/diagnosis/anthropometric',
         direct: 'forward',
-        icon: 'people'
+        icon: 'add'
       },
     ]
   }
