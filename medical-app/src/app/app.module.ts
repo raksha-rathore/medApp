@@ -8,7 +8,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SidemenuPage } from '../app/sidemenu/sidemenu.page';
+import { SidemenuPage } from './pages/sidemenu/sidemenu.page';
 
 
 @NgModule({
