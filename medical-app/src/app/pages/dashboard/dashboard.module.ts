@@ -6,9 +6,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { DashboardPage } from './dashboard.page';
+
 import { StudentTable } from './tables/students/students.table';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { StudentService } from '../common/service/student/student.service';
+
+import { AnalyticsService }from '../common/service/analytics/analytics.service';
+import { AnalyticsLineChart } from './charts/analytics.line';
+import { AnalyticsBarChart } from './charts/analytics.bar';
+import { AnalyticsDoghnutChart } from './charts/analytics.doghnut';
+import { ChartsModule } from 'ng2-charts';
+import { ChartComponent } from '../common/templates/charts/chart.component';
+
 
 const routes: Routes = [
   {
@@ -17,15 +26,39 @@ const routes: Routes = [
   }
 ];
 
+const components = [
+  DashboardPage,
+  StudentTable,
+  AnalyticsLineChart,
+  AnalyticsBarChart,
+  AnalyticsDoghnutChart,
+  ChartComponent
+];
+
+const modules = [
+  CommonModule,
+  FormsModule,
+  IonicModule,
+  Ng2SmartTableModule,
+  ChartsModule
+];
+
+const providers = [
+  StudentService,
+  AnalyticsService
+];
+
+
+
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    Ng2SmartTableModule,
+    ...modules,
     RouterModule.forChild(routes)
   ],
-  providers: [StudentService],
-  declarations: [DashboardPage, StudentTable]
+  providers: [...providers],
+  declarations: [...components]
 })
-export class DashboardPageModule {}
+export class DashboardPageModule {
+  
+
+}
