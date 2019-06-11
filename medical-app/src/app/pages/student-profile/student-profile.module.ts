@@ -12,8 +12,16 @@ import { PicUploadPage } from './components/pic-upload/pic-upload.page';
 const routes: Routes = [
   {
     path: '',
-    component: StudentProfilePage
-  }
+    component: BasicInfoPage,
+  },
+  {
+    path: 'address',
+    component: AddressPage
+  },
+  {
+    path: 'pic-upload',
+    component: PicUploadPage
+  },
 ];
 
 @NgModule({
