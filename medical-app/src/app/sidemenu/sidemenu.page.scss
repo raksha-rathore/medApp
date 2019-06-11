@@ -1,0 +1,28 @@
+
+
+.split-pane-md.split-pane-visible>.split-pane-side {
+   max-width: 20%;
+}
+
+.logo{
+  height: 40px;
+  display: inline-block;
+  background-size: cover;
+}
+
+.active {
+    --ion-text-color: var(--ion-color-primary);
+
+    ion-icon {
+        --ion-text-color-rgb: var(--ion-color-primary);
+    }
+}
+
+.parent-active {
+    font-weight: 500;
+}
+
+.sub-item {
+    padding-left: 20px;
+    font-size: small;
+}

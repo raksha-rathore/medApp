@@ -5,47 +5,11 @@
         <ion-menu-button color="secondary"></ion-menu-button>
       </ion-buttons>
       <ion-col style="display:flex">
-              <!-- <img class="logo" src="../assets/images/logo.png"/> -->
               <ion-title style="color:#FEFEFE;align-self:center">medical-app</ion-title>
       </ion-col>
     </ion-toolbar>
   </ion-header>
-  <ion-split-pane>
-    <ion-menu>
-      <ion-content class="bg-profile">
-        <ion-list style="padding-top:50px">
-          <div *ngFor="let p of appPages">
-
-   <!-- Standard Menu Item -->
-     <ion-item *ngIf="p.url" [routerLink]="p.url" routerDirection="root" routerLinkActive="active">
-       <ion-icon [name]="p.icon" slot="start"></ion-icon>
-       <ion-label>
-         {{ p.title }}
-       </ion-label>
-     </ion-item>
-   <!-- Item with Children -->
-
-   <ion-item button *ngIf="p.children?.length > 0" (click)="p.open = !p.open" [class.parent-active]="p.open" detail="false">
-     <ion-icon slot="start" name="arrow-forward" *ngIf="!p.open"></ion-icon>
-     <ion-icon slot="start" name="arrow-down" *ngIf="p.open"></ion-icon>
-     <ion-label>{{ p.title }}</ion-label>
-   </ion-item>
-
-   <!-- Children List for clicked Item -->
-   <ion-list *ngIf="p.open">
-       <ion-item *ngFor="let sub of p.children" class="sub-item" [routerLink]="sub.url" routerDirection="root"
-         routerLinkActive="active">
-         <ion-icon [name]="sub.icon" slot="start"></ion-icon>
-         <ion-label>
-           {{ sub.title }}
-         </ion-label>
-       </ion-item>
-   </ion-list>
-
- </div>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet main></ion-router-outlet>
-  </ion-split-pane>
+  <ion-content>
+    <app-sidemenu></app-sidemenu>
+</ion-content>
 </ion-app>

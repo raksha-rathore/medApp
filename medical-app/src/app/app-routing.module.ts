@@ -6,6 +6,8 @@ const routes: Routes = [
   { path: 'training', loadChildren: './trainings/training.module#TrainingModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardPageModule' },
+  { path: 'sidemenu', loadChildren: './sidemenu/sidemenu.module#SidemenuPageModule' },
+
   // { path: 'form', loadChildren: './form/form.module#FormPageModule' },
   // { path: 'menu', loadChildren: './pages/menu/menu.module#MenuPageModule' },
   // { path: 'main', loadChildren: './pages/main/main.module#MainPageModule' },
