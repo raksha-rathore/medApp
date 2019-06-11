@@ -1,0 +1,12 @@
+<div style="display: block;" [style.width]="options.width" [style.height]="options.height">
+    <canvas baseChart
+      [datasets]="options.chartData"
+      [labels]="options.labels"
+      [options]="options.chartOptions"
+      [colors]="options.colorProps"
+      [legend]="options.legends"
+      [chartType]="options.chartType"
+      (chartHover)="options.onHover($event)"
+      (chartClick)="options.onClick($event)">
+    </canvas>
+</div>
