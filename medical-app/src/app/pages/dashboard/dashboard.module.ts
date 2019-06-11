@@ -7,10 +7,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { DashboardPage } from './dashboard.page';
 
-import { StudentTable } from './tables/students/students.table';
-import { Ng2SmartTableModule } from 'ng2-smart-table';
-import { StudentService } from '../common/service/student/student.service';
-
 import { AnalyticsService }from '../common/service/analytics/analytics.service';
 import { AnalyticsLineChart } from './charts/analytics.line';
 import { AnalyticsBarChart } from './charts/analytics.bar';
@@ -28,7 +24,6 @@ const routes: Routes = [
 
 const components = [
   DashboardPage,
-  StudentTable,
   AnalyticsLineChart,
   AnalyticsBarChart,
   AnalyticsDoghnutChart,
@@ -39,12 +34,10 @@ const modules = [
   CommonModule,
   FormsModule,
   IonicModule,
-  Ng2SmartTableModule,
   ChartsModule
 ];
 
 const providers = [
-  StudentService,
   AnalyticsService
 ];
 

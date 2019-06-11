@@ -22,6 +22,7 @@ const routes: Routes = [
   // { path: 'main', loadChildren: './pages/main/main.module#MainPageModule' },
   // { path: 'ionic', loadChildren: './pages/ionic/ionic.module#IonicPageModule' },
   // { path: 'flutter', loadChildren: './pages/flutter/flutter.module#FlutterPageModule' },
+  { path: 'students', loadChildren: './pages/students/students.module#StudentsPageModule' },
 ];
 
 @NgModule({
