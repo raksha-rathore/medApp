@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'form', loadChildren: './pages/form/form.module#FormPageModule' },
   { path: 'student-profile', loadChildren: './pages/student-profile/student-profile.module#StudentProfilePageModule' },
   { path: 'diagnosis', loadChildren: './pages/diagnosis/diagnosis.module#DiagnosisPageModule' },
+  { path: 'students', loadChildren: './pages/students/students.module#StudentsPageModule' },
 
 ];
 

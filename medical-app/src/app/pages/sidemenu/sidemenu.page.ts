@@ -17,7 +17,7 @@ export class SidemenuPage implements OnInit {
   },
   {
     title: 'Students',
-    url: '/dashboard',
+    url: '/students',
     direct: 'forward',
     icon: 'people',
   },
