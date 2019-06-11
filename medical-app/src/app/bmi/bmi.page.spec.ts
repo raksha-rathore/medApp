@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BmiComponent } from './bmi.component';
+import { BmiPage } from './bmi.page';
 
-describe('BmiComponent', () => {
-  let component: BmiComponent;
-  let fixture: ComponentFixture<BmiComponent>;
+describe('BmiPage', () => {
+  let component: BmiPage;
+  let fixture: ComponentFixture<BmiPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BmiComponent ],
+      declarations: [ BmiPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BmiComponent);
+    fixture = TestBed.createComponent(BmiPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

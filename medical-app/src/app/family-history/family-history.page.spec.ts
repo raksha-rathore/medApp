@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FamilyHistoryComponent } from './family-history.component';
+import { FamilyHistoryPage } from './family-history.page';
 
-describe('FamilyHistoryComponent', () => {
-  let component: FamilyHistoryComponent;
-  let fixture: ComponentFixture<FamilyHistoryComponent>;
+describe('FamilyHistoryPage', () => {
+  let component: FamilyHistoryPage;
+  let fixture: ComponentFixture<FamilyHistoryPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FamilyHistoryComponent ],
+      declarations: [ FamilyHistoryPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FamilyHistoryComponent);
+    fixture = TestBed.createComponent(FamilyHistoryPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

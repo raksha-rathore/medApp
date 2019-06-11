@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bmi',
-  templateUrl: './bmi.component.html',
-  styleUrls: ['./bmi.component.scss'],
+  templateUrl: './bmi.page.html',
+  styleUrls: ['./bmi.page.scss'],
 })
-export class BmiComponent implements OnInit {
+export class BmiPage implements OnInit {
 
   constructor() { }
 
