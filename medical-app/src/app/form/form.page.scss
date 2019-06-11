@@ -1,0 +1,210 @@
+
+// .button-solid {
+//   --background-activated: none !important;
+// }
+// ion-button {
+//   --background: none;
+//   --box-shadow: none;
+//   margin-top: -10px;
+// }
+
+// ion-row {
+//   margin-left: 20px;
+// }
+
+// .number-circle {
+//   width: 25px;
+//   height: 100%;
+//   float: left;
+// }
+// .text-description {
+//   margin-left: 35px;
+//   height: 100%;
+// }
+
+// .stepRow {
+//   height: 16%;
+//   font-size: 14px !important;
+//   &.in-progress {
+//     height: 16%;
+//   }
+// }
+
+// .stepCircle {
+//   padding: 0.4rem;
+//   width: 25px !important;
+//   height: 25px !important;
+//   border-radius: 12.5px !important;
+//   font-size: 10px;
+//   color: black;
+//   line-height: 21px;
+//   text-align: center;
+//   vertical-align: middle;
+//   padding-top: 6px;
+// }
+
+// .step-no-container {
+//   padding: 4px !important;
+//   span {
+//     font-size: 14px;
+//   }
+//   &.cursor-pointer {
+//     cursor: pointer;
+//   }
+// }
+// .notStarted {
+//   @extend .stepCircle;
+//   background:black;
+//   border: 1px solid gray !important;
+//   span {
+//     color: gray !important;
+//     font-style: italic;
+//   }
+// }
+// .inProgress {
+//   @extend .stepCircle;
+//   z-index: 1;
+//   position: relative;
+//   background:black;
+//   border: 1px solid orange !important;
+//   span {
+//     color: orange!important;
+//   }
+// }
+// .completed {
+//   @extend .stepCircle;
+//   background: orange!important;
+//   border: 1px solid orange !important;
+//   span {
+//     color: black;
+//   }
+// }
+// .skipped {
+//   @extend .stepCircle;
+//   background: DarkGray;
+//   border: 1px solid DarkGray !important;
+//   cursor: not-allowed !important;
+//   span {
+//     color: varblack !important;
+//   }
+// }
+
+// .step-name {
+//   margin-left: 0px;
+//   white-space: normal;
+//   position: relative;
+//   margin-top: 3px;
+//   font-size: 12px;
+//   color: #383e4d !important;
+//   text-transform: capitalize;
+//   font-weight: 300;
+//   cursor: auto;
+//   cursor: auto;
+//   &.not-started {
+//     color: gray !important;
+//   }
+//   &.step-name-progress {
+//     font-weight: 900;
+//   }
+//   &.skipped-step {
+//     color: DarkGray !important;
+//     text-decoration: line-through;
+//     cursor: not-allowed !important;
+//   }
+//   &.cursor-pointer {
+//     cursor: pointer;
+//   }
+// }
+// .step-desc {
+//   text-transform: capitalize;
+//   margin-left: 0px;
+//   white-space: normal;
+//   margin-top: 3px;
+//   font-size: 10px;
+//   line-height: inherit;
+//   display: none;
+//   font-weight: 300;
+//   color:black;
+//   &.not-started {
+//     display: block !important;
+//   }
+// }
+
+// .childStep {
+//   margin-left: 14.5% !important;
+// }
+
+// .lastChildConnectLine {
+//   width: 1px;
+//   height: 95%;
+//   background-color: gray;
+//   z-index: -1;
+//   margin-left: -17px !important;
+// }
+
+// .childConnector {
+//   height: 1px;
+//   width: 14%;
+//   margin-top: 13px;
+//   right: 90%;
+//   z-index: 0;
+//   position: absolute;
+//   background-color: black;
+// }
+
+// .connectLine {
+//   width: 1px;
+//   height: 95%;
+//   margin-left: 13px !important;
+//   background-color: gray;
+//   z-index: -1;
+// }
+// .lastChildConnector {
+//   height: 1px;
+//   width: 10%;
+//   z-index: -1;
+//   position: absolute;
+//   background-color: white;
+//   margin-top: 0px;
+//   right: 94%;
+//   background-color: gray;
+// }
+
+// .lastChildStep {
+//   margin-bottom: 50px !important;
+// }
+// .movedOn {
+//   background-color: orange !important;
+// }
+
+// @media screen and (min-width: 1499px) {
+//   .childConnector {
+//     right: 92%;
+//   }
+// }
+// @media screen and (min-width: 961px) and (max-width: 1140px) {
+//   .childConnector {
+//     right: 88%;
+//   }
+// }
+// @media screen and (min-width: 720px) and (max-width: 960px) {
+//   .childConnector {
+//     right: 86%;
+//   }
+// }
+
+// .step-container-button {
+//   height: 100%;
+//   margin-top: 0px;
+//   width: 100%;
+//   text-align: inherit;
+//   --width: 100%;
+//   --height: 100%;
+//   --padding-end: 0;
+//   --padding-start: 0;
+// }
+
+// .step-container {
+//   width: 100%;
+//   height: 100%;
+// }
