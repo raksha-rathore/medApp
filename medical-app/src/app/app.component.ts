@@ -59,7 +59,7 @@ export class AppComponent {
       },
       {
         title: 'Students',
-        url: '/about',
+        url: '/student-profile',
         direct: 'forward',
         icon: 'people'
       },
