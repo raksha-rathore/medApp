@@ -32,7 +32,7 @@ export class SidemenuPage implements OnInit {
     children: [
       {
         title: 'Basic Information',
-        url: '/student-profile',
+        url: '/basic-info',
         direct: 'root',
         icon: 'add'
       },
@@ -44,7 +44,7 @@ export class SidemenuPage implements OnInit {
       },
       {
         title: 'Picture',
-        url: '/student-profile/pic-upload',
+        url: '/student-profile/address',
         direct: 'forward',
         icon: 'reverse-camera'
       },

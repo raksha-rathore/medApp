@@ -11,6 +11,7 @@
     --border:1px solid transparent;
     --border-radius:2px;
     height:40px;
+    text-transform: capitalize;
 }
 .btn-success{
 	background-color: #5cb85c !important;
@@ -21,27 +22,28 @@
 	background-color: #449d44 !important;
     border-color: #398439 !important;
 }
-.btn-primary, .btn-primary:focus {
-    background-color:#337ab7 !important;
-    border-color: #337ab7 !important;
+.btn-primary, .btn-primary:focus,.btn-primary:hover {
+    background-color:#ffffff !important;
+    border:1px solid #0453A0 !important;
+    color:#0453A0 !important;
    
 }
 .btn-danger{
 	background-color:#c9302c !important;
 	border: 1px solid #c9302c !important;
-	}
+}
 .btn-danger:hover{
 	color:red;
 	background-color:white;
-	}
+}
 .btn-info{
-	background-color: #5bc0de !important;
-    border-color: #46b8da !important;
+	background-color: #337ab7 !important;
+    border-color: #337ab7 !important;
 }
 .btn-info:hover{
     background-color: #31b0d5;
     border-color: #269abc;
-	}
+}
 .btn-warning{
 	background-color: #f0ad4e !important;
     border-color: #eea236 !important;
@@ -84,7 +86,7 @@
 .btn-white:hover  {
     background-color:#337ab7;
     border:2px solid #337ab7;
-   color:white;
+    color:white;
 }
 .btn-round:hover{
 	background-color:white;
@@ -125,22 +127,36 @@ ion-row{
             align-self:center;
             font-size:12px;
             padding-left:16px;
+            color:rgba(0, 0, 0, 0.87);
         }
     }
-    ion-input{
+    ion-input, ion-select,
+    ion-datetime {
         &.input-text{
-            height:40px;
+            height:35px;
             color:black;
-            border:1px solid #c7c4c4;
+            border:1px solid rgba(0, 0, 0, 0.30);
             border-radius:4px;
             background:transparent;
             box-sizing:border-box;
             box-shadow:none;
             width:100%;
+            font-size: 12px;
+            --placeholder-color: rgba(0, 0, 0, 0.60);
+        }
+    }
+    ion-select {
+        &.input-text {
+            padding-right: 15px;
         }
     }
 }
 /*Textarea*/
+ion-item.textarea-list,
+div.textarea-list{
+    --border-width: 0px;
+    width:100%;
+}
 // ion-item.textarea-list{
 //     --border-width: 0px;
 //     width:100%;
@@ -150,37 +166,49 @@ ion-row{
             align-self:center;
             font-size:12px;
             padding-left:16px;
+            --color:rgba(0, 0, 0, 0.87);
         }
     }
     ion-textarea{
         &.textarea{
+            &.small-height {
+                height: 38px;
+            }
             border:1px solid #c7c4c4;
             width:100%;
             box-shadow:none;
             box-sizing:border-box;
             border-radius:4px;
             margin-top:0;
+            font-size: 12px;
+            --placeholder-color: rgba(0, 0, 0, 0.60);
         }
     }
-// }
+
 /*Radio*/
 ion-list.list-radio{
+    background: transparent;
     ion-item {
         padding:0;
-
+        --background: transparent;
         &.item{
             --min-height:40px;
             --inner-border-width: 0px;
+            &.small-item {
+                --min-height: 29px;
+            }
         }
         ion-label{
             &.radio-label{
                 margin: 5px 0;
-                font-size: 14px;
+                font-size: 12px;
+                color:rgba(0, 0, 0, 0.87) !important;
             }
         }
         ion-radio{
             &.radio{
             margin: 5px 20px 5px 0px;
+            --color-checked: #0453A0;
             }
         }
     }
@@ -198,6 +226,7 @@ ion-list.check-list{
             &.check-label{
                 margin: 5px 0;
                 font-size: 14px;
+                color:rgba(0, 0, 0, 0.87);
             }
         }
         ion-checkbox{
@@ -205,6 +234,18 @@ ion-list.check-list{
             margin: 5px 20px 5px 0px;
             }
         }
+    }
+}
+
+.labelling {
+    ion-label {
+        font-size: 14px;
+        margin-top: 12px;
+        display: inline-block;
+    }
+
+    .width-200 {
+        max-width: 200px;
     }
 }
 /*Calendar*/
@@ -230,4 +271,54 @@ select {
     width:100%;
     color:#c7c4c4;
     padding-left:15px;
+    font-size:12px;
+}
+/*stepper*/
+.stepper {
+    counter-reset: step; 
+}
+.stepper li{
+    list-style-type: none; 
+    float: left; 
+    width: 33.33%; 
+    position:relative; 
+    text-align: center;
+    cursor: pointer;
+    font-size:12px;
+}
+.stepper li::before {
+    content:counter(step); 
+    counter-increment: step; 
+    height:30px;
+    width:30px; 
+    line-height: 30px; 
+    border: 2px solid #ddd; 
+    display:block; 
+    text-align: center;
+    margin: 0 auto 10px auto; 
+    border-radius: 50%; 
+    background-color: white; 
+}
+.stepper li::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    background: #ddd;
+    border: 1px solid #ddd;
+    margin-left: 16px;
+    top: 15px;
+    left: -50%;
+}
+.stepper li:first-child::after {
+    content:none;
+}
+.stepper li.active {
+    color:#0453A0;
+}
+.stepper li.active::before {
+    border-color:#0453A0;
+}
+.stepper li.active + li::after{
+    background-color:#0453A0; 
+    border:1px solid #0453A0;
 }

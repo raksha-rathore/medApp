@@ -1,0 +1,196 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Mensuration</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding color="light" class="labelling">
+    <div class="ion-padding">
+      <strong>Mensuration</strong>
+  
+      <ion-grid class="mt-20">
+        <ion-row>
+  
+          <ion-col size="12" size-md="8">
+            <ion-row>
+              <ion-col size="12" size-md="2">
+                <ion-label>Month</ion-label>
+              </ion-col>
+              <ion-col size="12" size-md="5">
+                  <ion-select class="input-text" placeholder="Select One">
+                    <ion-select-option value="Jan">Jan</ion-select-option>
+                    <ion-select-option value="Mar">Mar</ion-select-option>
+                    <ion-select-option value="May">May</ion-select-option>
+                    <ion-select-option value="Jul">Jul</ion-select-option>
+                    <ion-select-option value="Sep">Sep</ion-select-option>
+                    <ion-select-option value="Nov">Nov</ion-select-option>
+                  </ion-select>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+  
+          <ion-col size="12" size-md="8">
+            <ion-row>
+              <ion-col size="12" size-md="2">
+                <ion-label>Day Cycle</ion-label>
+              </ion-col>
+              <ion-col size="12" size-md="5">
+                <ion-input class="input-text"></ion-input>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+  
+          <ion-col size="12" size-md="8">
+              <ion-row>
+                <ion-col size="12" size-md="2">
+                  <ion-label>Period Starts</ion-label>
+                </ion-col>
+                <ion-col size="12" size-md="5">
+                  <ion-datetime class="input-text" display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+  
+            <ion-col size="12" size-md="8">
+                <ion-row>
+                  <ion-col size="12" size-md="2">
+                    <ion-label>Period Ends</ion-label>
+                  </ion-col>
+                  <ion-col size="12" size-md="5">
+                    <ion-datetime class="input-text" display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+  
+              <ion-col size="12" size-md="8">
+                  <ion-row>
+                    <ion-col size="12" size-md="2">
+                      <ion-label>Duration</ion-label>
+                    </ion-col>
+                    <ion-col size="12" size-md="5">
+                      <ion-input class="input-text"></ion-input>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+
+              <ion-col size="12" size-md="8">
+                <ion-row>
+                  <ion-col size="12" size-md="2">
+                    <ion-label>If any menstrual problem</ion-label>
+                  </ion-col>
+                  <ion-col size="12" size-md="5">
+                    <div class="textarea-list">
+                      <ion-textarea class="textarea" placeholder="Enter any notes here"></ion-textarea>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+
+              <ion-col size="12" size-md="8">
+                  <ion-row>
+                    <ion-col size="12" size-md="2">
+                      <ion-label>If any menstrual problem irregular</ion-label>
+                    </ion-col>
+                    <ion-col size="12" size-md="5">
+                          <ion-list class="list-radio">
+                              <ion-radio-group>
+                                <ion-row>
+                                  <ion-col size="6">
+                                      <ion-item class="item">
+                                        <ion-label class="radio-label">Yes</ion-label>
+                                        <ion-radio class="radio" slot="start" value="Yes" checked></ion-radio>
+                                      </ion-item>
+                                  </ion-col>
+                                  <ion-col size="6">
+                                    <ion-item class="item item-border">
+                                      <ion-label class="radio-label">No</ion-label>
+                                      <ion-radio class="radio" slot="start" value="No"></ion-radio>
+                                    </ion-item>
+                                  </ion-col>
+                                </ion-row>
+                              </ion-radio-group>
+                            </ion-list>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+
+                <ion-col size="12" size-md="8">
+                    <ion-row>
+                      <ion-col size="12" size-md="2">
+                        <ion-label>Action Taken By ANM &amp; Teacher</ion-label>
+                      </ion-col>
+                      <ion-col size="12" size-md="5">
+                        <div class="textarea-list">
+                          <ion-textarea class="textarea" placeholder="Enter notes here"></ion-textarea>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                  </ion-col>
+
+                  <ion-col size="12" size-md="8">
+                      <ion-row>
+                        <ion-col size="12" size-md="2">
+                          <ion-label>Treatment given by Medical Officer</ion-label>
+                        </ion-col>
+                        <ion-col size="12" size-md="5">
+                          <div class="textarea-list">
+                            <ion-textarea class="textarea" placeholder="Enter notes here"></ion-textarea>
+                          </div>
+                        </ion-col>
+                      </ion-row>
+                    </ion-col>
+
+                    <ion-col size="12" size-md="8">
+                        <ion-row>
+                          <ion-col size="12" size-md="2">
+                            <ion-label>Referral</ion-label>
+                          </ion-col>
+                          <ion-col size="12" size-md="5">
+                            <ion-input class="input-text"></ion-input>
+                          </ion-col>
+                        </ion-row>
+                      </ion-col>
+
+                      <ion-col size="12" size-md="8">
+                          <ion-row>
+                            <ion-col size="12" size-md="2" class="d-flex align-center">
+                              <ion-label class="no-margin">Follow up</ion-label>
+                            </ion-col>
+                            <ion-col size="12" size-md="5">
+                                  <ion-list class="list-radio">
+                                      <ion-radio-group>
+                                        <ion-row>
+                                          <ion-col size="6">
+                                              <ion-item class="item">
+                                                <ion-label class="radio-label">Yes</ion-label>
+                                                <ion-radio class="radio" slot="start" value="Yes" checked></ion-radio>
+                                              </ion-item>
+                                          </ion-col>
+                                          <ion-col size="6">
+                                            <ion-item class="item item-border">
+                                              <ion-label class="radio-label">No</ion-label>
+                                              <ion-radio class="radio" slot="start" value="No"></ion-radio>
+                                            </ion-item>
+                                          </ion-col>
+                                        </ion-row>
+                                      </ion-radio-group>
+                                    </ion-list>
+                            </ion-col>
+                          </ion-row>
+                        </ion-col>
+  
+              <ion-col size="12"></ion-col>
+              <ion-col size="12" size-md="8">
+                <ion-row>
+                  <ion-col size="12" size-md="2">
+                  </ion-col>
+                  <ion-col size="12" size-md="5" class="d-flex justify-end">
+                    <ion-button class="btn btn-primary full-width mt-20 width-200" type="submit" (click)="onFormSubmit()">SUBMIT</ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+  
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-content>
