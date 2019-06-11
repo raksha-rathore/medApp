@@ -6,12 +6,14 @@ const routes: Routes = [
   { path: 'training', loadChildren: './trainings/training.module#TrainingModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardPageModule' },
-  // { path: 'form', loadChildren: './form/form.module#FormPageModule' },
+  { path: 'bmi', loadChildren: './bmi/bmi.module#BmiComponentModule' },
+  { path: 'mensuration', loadChildren: './mensuration/mensuration.module#MensurationComponentModule' },
+  { path: 'familyhistory', loadChildren: './familyhistory/familyhistory.module#FamilyhistoryComponentModule' },
+  { path: 'form', loadChildren: './form/form.module#FormPageModule' },
   // { path: 'menu', loadChildren: './pages/menu/menu.module#MenuPageModule' },
   // { path: 'main', loadChildren: './pages/main/main.module#MainPageModule' },
   // { path: 'ionic', loadChildren: './pages/ionic/ionic.module#IonicPageModule' },
   // { path: 'flutter', loadChildren: './pages/flutter/flutter.module#FlutterPageModule' },
-
 ];
 
 @NgModule({
