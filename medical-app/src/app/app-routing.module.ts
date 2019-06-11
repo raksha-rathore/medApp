@@ -3,9 +3,13 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'training', loadChildren: './trainings/training.module#TrainingModule' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardPageModule' },  { path: 'form', loadChildren: './form/form.module#FormPageModule' },
+  // { path: 'sidemenu', loadChildren: './sidemenu/sidemenu.module#SidemenuPageModule' },
+  { path: 'training', loadChildren: './pages/trainings/training.module#TrainingModule' },
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'dashboard', loadChildren: './pages/dashboard/dashboard.module#DashboardPageModule' },
+  { path: 'form', loadChildren: './pages/form/form.module#FormPageModule' },
+  { path: 'student-profile', loadChildren: './pages/student-profile/student-profile.module#StudentProfilePageModule' },
+  { path: 'diagnosis', loadChildren: './pages/diagnosis/diagnosis.module#DiagnosisPageModule' },
 
 ];
 
