@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidemenuPage implements OnInit {
     public appPages: any;
+    public imgURL ="../../assets/images/logo.png";
   constructor() {
     this.appPages = [
   {

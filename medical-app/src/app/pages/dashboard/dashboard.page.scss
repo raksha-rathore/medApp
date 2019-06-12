@@ -30,3 +30,36 @@
         transition: all 0.2s ease-in;
     }
 }
+
+.header-sidenavigation {
+    padding: 0;
+
+    ion-item {
+        --border-width: 0;
+        --border-color: transparent;
+        position: relative;
+        cursor: pointer;
+
+        .arrow {
+            position: absolute;
+            right: 0;
+            top: 19px;
+        }
+
+        ion-label {
+            img {
+                max-width: 32px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .submenu-list {
+        ion-icon {
+            font-size: 20px;
+            margin-right: 10px;
+            border: 1px solid var(--ion-color-primary);
+            border-radius: 50%;
+        }
+    }
+}

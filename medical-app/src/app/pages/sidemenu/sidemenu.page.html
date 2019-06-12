@@ -1,9 +1,15 @@
 
 <ion-split-pane>
   <ion-menu contentId="content">
+    <div class="intro-header p-15">
+      <a href="" class="login-logo d-flex flex-row align-center">
+        <img [src]="imgURL" alt="Logo" />
+        Medical App
+      </a>
+    </div>
   <ion-content class="bg-profile">
-    <ion-list style="padding-top:50px">
-      <div *ngFor="let p of appPages">
+    <ion-list>
+      <div *ngFor="let p of appPages" [class.grand-active]="p.open">
 
 
  <ion-item *ngIf="p.url" [routerLink]="p.url" routerDirection="root" routerLinkActive="active">
@@ -18,6 +24,11 @@
  <!-- <ion-icon slot="start" name="arrow-forward" *ngIf="!p.open"></ion-icon> -->
  <ion-icon slot="start" [name]="p.icon"></ion-icon>
  <ion-label>{{ p.title }}</ion-label>
+
+ <div class="arrow">
+    <ion-icon name="arrow-dropright" *ngIf="!p.open"></ion-icon>
+    <ion-icon name="arrow-dropdown" *ngIf="p.open"></ion-icon>
+ </div>
 </ion-item>
 
 
