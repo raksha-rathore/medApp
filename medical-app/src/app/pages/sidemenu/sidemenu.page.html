@@ -15,16 +15,16 @@
 
 
 <ion-item button *ngIf="p.children?.length > 0" (click)="p.open = !p.open" [class.parent-active]="p.open" detail="false">
- <ion-icon slot="start" name="arrow-forward" *ngIf="!p.open"></ion-icon>
- <ion-icon slot="start" name="arrow-down" *ngIf="p.open"></ion-icon>
+ <!-- <ion-icon slot="start" name="arrow-forward" *ngIf="!p.open"></ion-icon> -->
+ <ion-icon slot="start" [name]="p.icon"></ion-icon>
  <ion-label>{{ p.title }}</ion-label>
 </ion-item>
 
 
-<ion-list *ngIf="p.open">
+<ion-list *ngIf="p.open" class="sub-items">
    <ion-item *ngFor="let sub of p.children" class="sub-item" [routerLink]="sub.url" routerDirection="root"
      routerLinkActive="active">
-     <ion-icon [name]="sub.icon" slot="start"></ion-icon>
+     <!-- <ion-icon [name]="sub.icon" slot="start"></ion-icon> -->
      <ion-label>
        {{ sub.title }}
      </ion-label>

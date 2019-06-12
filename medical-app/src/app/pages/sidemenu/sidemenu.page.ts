@@ -13,7 +13,7 @@ export class SidemenuPage implements OnInit {
     title: 'Dashboard',
     url: '/dashboard',
     direct: 'forward',
-    icon: 'home',
+    icon: 'analytics',
   },
   {
     title: 'Students',
@@ -29,41 +29,43 @@ export class SidemenuPage implements OnInit {
   },
   {
     title: 'Student Profile',
+    icon: 'person',
     children: [
-      // {
-      //   title: 'Basic Information',
-      //   url: '/basic-info',
-      //   direct: 'root',
-      //   icon: 'add'
-      // },
+      {
+        title: 'Basic Information',
+        url: '/basic-info',
+        direct: 'root',
+        icon: ''
+      },
       {
         title: 'Address',
         url: '/student-profile/address',
         direct: 'forward',
-        icon: 'home'
+        icon: ''
       },
       {
         title: 'Picture',
         url: '/student-profile/address',
         direct: 'forward',
-        icon: 'reverse-camera'
+        icon: ''
       },
     ]
   },
   {
     title: 'Diagonisis',
+    icon: 'pulse',
     children: [
       {
         title: 'Present Medical History',
         url: '/diagnosis',
         direct: 'root',
-        icon: 'add'
+        icon: ''
       },
       {
         title: 'Anthropometric Measurement',
         url: '/diagnosis/anthropometric',
         direct: 'forward',
-        icon: 'add'
+        icon: ''
       },
     ]
   }

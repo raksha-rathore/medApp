@@ -1,7 +1,8 @@
 
 
 .split-pane-md.split-pane-visible>.split-pane-side {
-   max-width: 20%;
+    max-width: 264px;
+    width: 100%;
 }
 
 .logo{
@@ -22,7 +23,58 @@
     font-weight: 500;
 }
 
-.sub-item {
-    padding-left: 20px;
-    font-size: small;
+ion-menu {
+    --background: var(--custom-sidebar-bg);
+    box-shadow: 1px 0 20px 0 var(--custom-sidebar-bg);
+
+    ion-content {
+        --background: var(--custom-sidebar-bg);
+
+        ion-list {
+            background: transparent;
+
+            ion-item {
+                --background: transparent;
+                --border-width: 0;
+                --border-color: transparent;
+                font-size: 15px;
+                font-weight: 400;
+
+                ion-label,
+                ion-icon {
+                    color: var(--custom-sidebar-color);
+                }
+
+                ion-icon {
+                    max-width: 18px;
+                    margin-right: 15px;
+                }
+
+                &.active {
+                    --background: var(--custom-sidebar-darkbg);
+
+                    ion-label,
+                    ion-icon {
+                        color: #fff;
+                    }
+                }
+            }
+
+            &.sub-items {
+                padding: 0;
+
+                ion-item {
+                    padding: 0;
+
+                    &.sub-item {
+                        font-size: small;
+                    }
+
+                    ion-label {
+                        padding-left: 33px;
+                    }
+                }
+            }
+        }
+    }
 }
