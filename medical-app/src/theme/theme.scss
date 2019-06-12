@@ -366,6 +366,12 @@ ion-card{
     height:100%;
     padding:30px;
 }
+.table-container table {
+    border-bottom: 1px solid #dee2e6;
+}
+.table-container table thead tr:nth-child(odd) {
+    background-color: #ECECEC;
+}
 .table-container thead th {
     font-weight: 600;
     border-bottom: 0px!important;
@@ -385,9 +391,12 @@ ion-card{
     text-align:left;
     color:black;
   }
-  .table-container td:hover, .table th:hover{
-    background-color: #ECECEC;
-  }
+  .table-container tr, .table-container thead tr {
+    height: 40px;
+    &:hover{
+        background-color: #ECECEC;
+    }
+}
   
   .custom-table > tbody > tr{
     border:1px solid black;
@@ -409,4 +418,103 @@ ion-card{
   border-top: 1px solid #dee2e6;
   padding:12px 10px;
   color:#212529;
+}
+
+/*pagination*/
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    text-decoration: none!important;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: #0056b3;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6
+}
+
+.page-link:focus {
+    z-index: 2;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25)
+}
+
+.page-link:not(:disabled):not(.disabled) {
+    cursor: pointer
+}
+
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff
+}
+.page-item:last-child .page-link {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dee2e6
+}
+
+
+.pagination>li:first-child>a,.pagination>li:first-child>span,.pagination>li:last-child>a,.pagination>li:last-child>span,.pagination>li>a,.pagination>li>span {
+    border-radius: 100px!important;
+    margin: 0 2px;
+    color: #777;
+    border-color: #ddd
+}
+
+.pagination.pg-default>li.active:first-child>a,.pagination.pg-default>li.active:last-child>a,.pagination.pg-default>li.active>a{
+    background: #1a2035;
+    border-color: #1a2035;
+    color: #fff
+}
+
+.pagination.pg-primary>li.active:first-child>a,.pagination.pg-primary>li.active:last-child>a,.pagination.pg-primary>li.active>a,n {
+    background: #1572e8;
+    border-color: #1572e8;
+    color: #fff
+}
+.ng2-smart-pagination .page-link-next, .ng2-smart-pagination .page-link-prev {
+    font-size: 14px!important;
 }
