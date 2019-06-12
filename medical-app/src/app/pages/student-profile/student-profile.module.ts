@@ -57,10 +57,10 @@ const routes: Routes = [
     BasicInfoPage,
     // PicUploadPage,
     StudentProfilePage
-  ],
-  exports:[
-    RouterModule,
-    StudentProfilePageModule
-  ]
+   ]
+  // exports:[
+  //   RouterModule,
+  //   StudentProfilePageModule
+  // ]
 })
 export class StudentProfilePageModule {}

@@ -2,9 +2,10 @@ import { Component, OnInit, Input  } from '@angular/core';
 
 @Component({
   selector: 'app-table',
-  templateUrl: './table.component.html'
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.scss'],
 })
-export class ChartComponent implements OnInit {
+export class TableComponent implements OnInit {
 
     @Input() options: object;
     constructor() { 
