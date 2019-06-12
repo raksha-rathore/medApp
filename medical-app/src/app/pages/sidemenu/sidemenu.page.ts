@@ -30,12 +30,12 @@ export class SidemenuPage implements OnInit {
   {
     title: 'Student Profile',
     children: [
-      {
-        title: 'Basic Information',
-        url: '/basic-info',
-        direct: 'root',
-        icon: 'add'
-      },
+      // {
+      //   title: 'Basic Information',
+      //   url: '/basic-info',
+      //   direct: 'root',
+      //   icon: 'add'
+      // },
       {
         title: 'Address',
         url: '/student-profile/address',
