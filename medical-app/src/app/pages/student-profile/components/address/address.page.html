@@ -1,4 +1,30 @@
-<ion-title class="page-title">Address Info</ion-title>
+<ion-grid class="p-30 mob-p-15">
+  <ion-title class="page-title mob-p-10">Address Info</ion-title>
+  <ion-card class="bg-white form-card mob-p-10">
+    <form class="basicInfoForm">
+      <ion-row>
+        <ion-col size-xs="12" size-md="6" size-lg="6" size-sm="6" class="pr-20 mob-pl-0 mob-pr-0">
+          <ion-label class="input-label">Permanent Address</ion-label>
+          <ion-textarea class="textarea" placeholder="Enter permanent address"></ion-textarea>
+        </ion-col>
+
+        <ion-col size-xs="12" size-md="6" size-lg="6" size-sm="6" class="pr-20 mob-pl-0 mob-pr-0">
+          <ion-label class="input-label">Residential Address</ion-label>
+          <ion-textarea class="textarea" placeholder="Enter residential address"></ion-textarea>
+        </ion-col>
+      </ion-row>
+    </form>
+    <ion-row class="mt-30">
+      <ion-col size="12" class="submitButton">
+        <ion-button type="submit" class="btn btn-primary">
+          Save and Continue<ion-icon name="arrow-forward" class="ml-5"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-grid>
+
+<!-- <ion-title class="page-title">Address Info</ion-title>
 <form class="basicInfoForm">
   <ion-grid>
     <ion-row>
@@ -25,4 +51,4 @@
       Save and Continue<ion-icon name="arrow-forward" class="ml-5"></ion-icon>
     </ion-button>
   </ion-col>
-</ion-row>
+</ion-row> -->
