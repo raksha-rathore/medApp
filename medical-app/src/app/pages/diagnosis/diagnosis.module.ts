@@ -12,11 +12,17 @@ import { AnthropometricMeaseurementsPage } from './components/anthropometric-mea
 const routes: Routes = [
   {
     path: '',
-    component: DiagnosisPage
-  },
-  {
-    path: 'anthropometric',
-    component: AnthropometricMeaseurementsPage
+    component: DiagnosisPage,
+    children: [
+      {
+        path: 'medical-info',
+        component:PresentMedicalHistoryPage
+      },
+      {
+        path: 'anthropometric-info',
+        component: AnthropometricMeaseurementsPage
+      }
+    ]
   }
 
 ];

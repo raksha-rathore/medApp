@@ -30,15 +30,15 @@ export class SidemenuPage implements OnInit {
   {
     title: 'Student Profile',
     children: [
-      // {
-      //   title: 'Basic Information',
-      //   url: '/basic-info',
-      //   direct: 'root',
-      //   icon: 'add'
-      // },
+      {
+        title: 'Basic Information',
+        url: '/student-profile/basic-info',
+        direct: 'root',
+        icon: 'add'
+      },
       {
         title: 'Address',
-        url: '/student-profile/address',
+        url: '/student-profile/address-info',
         direct: 'forward',
         icon: 'home'
       },
@@ -55,13 +55,13 @@ export class SidemenuPage implements OnInit {
     children: [
       {
         title: 'Present Medical History',
-        url: '/diagnosis',
+        url: '/diagnosis/medical-info',
         direct: 'root',
         icon: 'add'
       },
       {
         title: 'Anthropometric Measurement',
-        url: '/diagnosis/anthropometric',
+        url: '/diagnosis/anthropometric-info',
         direct: 'forward',
         icon: 'add'
       },
