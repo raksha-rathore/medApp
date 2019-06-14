@@ -95,6 +95,12 @@
 /**--Flex Based CSS--**/
 .justify-end {
     justify-content: flex-end;
+
+    @media (max-width: 768px) {
+        &.no-end-on-sm {
+            justify-content: flex-start;
+        }
+    }
 }
 .d-flex {
     display: flex !important;
