@@ -34,13 +34,13 @@ export class SidemenuPage implements OnInit {
     children: [
       {
         title: 'Basic Information',
-        url: '/basic-info',
+        url: '/student-profile/basic-info',
         direct: 'root',
         icon: ''
       },
       {
         title: 'Address',
-        url: '/student-profile/address',
+        url: '/student-profile/address-info',
         direct: 'forward',
         icon: ''
       },
@@ -58,13 +58,13 @@ export class SidemenuPage implements OnInit {
     children: [
       {
         title: 'Present Medical History',
-        url: '/diagnosis',
+        url: '/diagnosis/medical-info',
         direct: 'root',
         icon: ''
       },
       {
         title: 'Anthropometric Measurement',
-        url: '/diagnosis/anthropometric',
+        url: '/diagnosis/anthropometric-info',
         direct: 'forward',
         icon: ''
       },
