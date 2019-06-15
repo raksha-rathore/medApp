@@ -4,7 +4,7 @@ import { StudentService } from '../../../common/service/student/student.service'
 
 @Component({
   selector: 'med-app-table',
-  templateUrl: '../../../common/templates/table/table.component.html',
+  templateUrl: '../../../common/components/table/table.component.html',
 })
 export class StudentTable {
 

@@ -1,0 +1,14 @@
+<div ngbDropdown class="d-inline-block">
+    <div *ngIf="options.iconDownload; else buttonDownload">
+        <ion-icon name="download" [style.width]="width" [style.height]="height" (click) =options.handler($event)></ion-icon>
+    </div>
+    <ng-template #buttonDownload>
+        <button class="btn  dropdown-toggle download-button" [id]="options.id" ngbDropdownToggle>Export</button>
+        <div ngbDropdownMenu [attr.aria-labelledby]="options.id">
+            <div *ngFor="let option of options.exportOptions let i= index">
+                <button (click)="option.handler($event)" ngbDropdownItem>{{option.label}}</button>
+                <div class="dropdown-divider" *ngIf="i !== options.length-1"></div>
+            </div>
+        </div>
+    </ng-template>
+</div>

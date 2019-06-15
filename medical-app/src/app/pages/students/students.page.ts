@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { StudentService } from '../common/service/student/student.service';
-import { ExportFilesService } from  '../common/service/exportFile/export.service'
+import { ExportFilesService } from '../common/service/exportFile/export.service';
 
 @Component({
   selector: 'app-students',
-  templateUrl: '../common/templates/table/table.component.html',
+  templateUrl: '../common/components/table/table.component.html',
 })
 export class StudentsPage {
 
-  settings = {
+  constructor(private service: StudentService, private exportService: ExportFilesService) {
+    const data = this.service.getAllStudents();
+    this.source.load(data);
+  }
+
+  private settings = {
     actions: {
       add: false,
       edit:false,
@@ -35,7 +40,7 @@ export class StudentsPage {
     }
   };
 
-  downloadOptions = {
+  private downloadOptions = {
     id: "students-download",
     exportOptions: [
       {
@@ -54,15 +59,9 @@ export class StudentsPage {
     const allClasses = this.service.getAllClasses();
     return allClasses.map((cl)=> ({value: cl, title: cl}));
   }
-
-  export(){
-      const sheetColumns = this.service.getParsedColumnsForSheet(this.settings.columns);
-      const sheetRows = this.service.getAllStudents();
-      this.exportService.exportJsonToExcel(sheetColumns, sheetRows, 'students', 'students');
-  }
-
-  constructor(private service:StudentService,  private exportService:ExportFilesService) {
-    const data = this.service.getAllStudents();
-    this.source.load(data);
+  export() {
+    const sheetColumns = this.service.getParsedColumnsForSheet(this.settings.columns);
+    const sheetRows = this.service.getAllStudents();
+    this.exportService.exportJsonToExcel(sheetColumns, sheetRows, 'students', 'students');
   }
 }

@@ -1,17 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { AnalyticsService } from '../../common/service/analytics/analytics.service';
+import { ExportFilesService } from '../../common/service/exportFile/export.service';
 
 @Component({
   selector: 'med-bar-chart',
-  template: '<med-chart [options]="options"></med-chart>'
+  templateUrl: './analytics.bar.html'
 })
 export class AnalyticsBarChart implements OnInit {
 
+  constructor(private service: AnalyticsService, private exportService: ExportFilesService) { 
+  }
   private extraOptions = {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  options = {
+  private options = {
+	id:  "analytics-bar-chart",
+	cssClass: 'dashboardChart',
     width: "400px",
     height: "200px",
     chartData: this.service.getBarChartData(),
@@ -23,8 +28,14 @@ export class AnalyticsBarChart implements OnInit {
     onHover: this.onHover
 
   }
+   private downloadOptions = {
+    id: "analytics-bar-download",
+	handler: () => this.export(),
+	iconDownload: true
+  };
   
-  constructor(private service: AnalyticsService) { 
+   export() {
+	  this.exportService.exportToPdf("analytics-bar-chart", "analytics-bar-chart");
   }
 
   ngOnInit() {
