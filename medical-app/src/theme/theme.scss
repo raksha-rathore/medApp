@@ -576,15 +576,15 @@ ion-card{
 }
 ion-title {
     position: relative; 
-    padding-left: 25px;
+    padding-left: 30px;
     font-size: 24px;
 
     &:before {
         content: '';
         position: absolute;
         left: 10px;
-        top: -3px;
-        bottom: -3px;
+        top: 4px;
+        bottom: 4px;
         width: 4px;
         background: var(--custom-color-blue);
     }

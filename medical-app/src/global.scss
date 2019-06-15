@@ -16,12 +16,12 @@
     --border-radius: 0;
 }
 
-.container {
+.holder {
     padding: 20px 50px;
 }
 
 @media (max-width:480px) {
-    .container {
+    .holder {
         padding: 0;
     }
 }

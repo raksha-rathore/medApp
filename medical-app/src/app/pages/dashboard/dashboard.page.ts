@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-
+  toggle = true;
+  toggle2 = true;
+  toggle3 = true;
   constructor() { }
 
   ngOnInit() {
