@@ -16,7 +16,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-	Common,
+	  Common,
     Ng2SmartTableModule,
     RouterModule.forChild(routes)
   ],

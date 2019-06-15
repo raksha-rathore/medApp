@@ -5,16 +5,19 @@ import { ExportFilesService } from '../common/service/exportFile/export.service'
 
 @Component({
   selector: 'app-students',
-  templateUrl: '../common/components/table/table.component.html',
+  templateUrl: './student.page.html',
 })
 export class StudentsPage {
 
   constructor(private service: StudentService, private exportService: ExportFilesService) {
     const data = this.service.getAllStudents();
-    this.source.load(data);
+    this.options.source.load(data);
   }
 
-  private settings = {
+  private options = {
+    id: "students_table",
+    source:  new LocalDataSource(),
+    settings: {
     actions: {
       add: false,
       edit:false,
@@ -38,7 +41,8 @@ export class StudentsPage {
         },
       }
     }
-  };
+  }
+};
 
   private downloadOptions = {
     id: "students-download",
@@ -60,7 +64,7 @@ export class StudentsPage {
     return allClasses.map((cl)=> ({value: cl, title: cl}));
   }
   export() {
-    const sheetColumns = this.service.getParsedColumnsForSheet(this.settings.columns);
+    const sheetColumns = this.service.getParsedColumnsForSheet(this.options.settings.columns);
     const sheetRows = this.service.getAllStudents();
     this.exportService.exportJsonToExcel(sheetColumns, sheetRows, 'students', 'students');
   }
