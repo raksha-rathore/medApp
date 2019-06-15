@@ -1,5 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ExportAsModule } from 'ngx-export-as';
@@ -8,7 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {
     ChartComponent, 
-    DownloadButton
+    DownloadButton,
+    TableComponent
 } from './components';
 
 import {
@@ -23,12 +25,14 @@ const BASE_MODULES = [
 	FormsModule,
     IonicModule,
     ExportAsModule,
-	ChartsModule
+    ChartsModule,
+    Ng2SmartTableModule
 ];
 
 const COMPONENTS = [
     ChartComponent,
-    DownloadButton
+    DownloadButton,
+    TableComponent
 ];
 
 const PROVIDERS = [

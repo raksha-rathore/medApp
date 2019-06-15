@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Students</ion-title>
+    </ion-toolbar>
+</ion-header>
+<div class="table-container mob-p-15">
+    <ion-card class="bg-white form-card mob-p-10 pt-0">
+        <div class="student-export-dropdown">
+            <med-download [options]="downloadOptions"></med-download>
+        </div>
+        <app-table [options]="options"></app-table>
+    </ion-card>
+</div>
