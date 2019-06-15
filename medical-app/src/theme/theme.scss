@@ -367,6 +367,7 @@ ion-card{
 }
 /*table scss*/
 .table-container {
+    overflow-x: auto;
     background:#f4f7fa;
     width:100%;
     height:100%;
@@ -625,4 +626,27 @@ ion-title {
             margin: 0;
         }
     }
+}
+/*dropdown*/
+.student-export-dropdown{
+    display: inline-block;
+    float: right;
+    margin: 5px;
+}
+.download-button {
+    background-color: #04a9f5!important;
+    border-color: #04a9f5!important;
+    color: #fff !important;
+}
+.dropdown-menu{
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 11px rgba(0,0,0,.15)!important;
+    padding-bottom: 8px;
+    margin-top: 3px;
+}
+.dropdown-item {
+    padding: 0.25rem 0.5rem!important;
+    font-size:14px;
+    font-family: Roboto!important;
 }
