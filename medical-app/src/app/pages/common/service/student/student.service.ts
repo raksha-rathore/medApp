@@ -7,8 +7,7 @@ export class StudentService extends StudentDataService {
         const data = [];
         let studentClass = 6;
         let age = 11;
-        let NamesList = ['Raju', 'Mohan', 'Rani', 'Gowtham', 'Ravi', 'Kusum', 'Anandita', 'nidhin', 'Reema'];
-        let lastNames = ['saxena', 'tiwari', 'mondal', 'priya', 'goyal', 'shetty', 'Kumar', 'mathew', 'kashyap']
+        let NamesList = ['Raju', 'Mohan', 'Rani', 'Gowtham', 'Ravi'];
         let index = 0;
         for (let i=0; i<100; i++){
           if (index >4) 
@@ -20,7 +19,7 @@ export class StudentService extends StudentDataService {
           let studentObj = {
             class: studentClass,
             age: age,
-            name: NamesList[index]+' '+lastNames[index]
+            name: NamesList[index]+'_'+i
           }
           data.push(studentObj);
           index++;
@@ -29,11 +28,9 @@ export class StudentService extends StudentDataService {
         }
         return data;
     }
-
     getAllClasses() {
       return ['6','7','8','9','10'];
     }
-    
     getParsedColumnsForSheet(columns:any) {
       const sheetColumns =[];
       for (let [key, value] of Object.entries(columns)) {

@@ -1,5 +1,10 @@
-<div style="display: block;" [style.width]="options.width" [style.height]="options.height">
+<div
+  style="display: block;"
+  [style.width]="options.width"
+  [style.height]="options.height"
+  [class]="options.cssClass">
     <canvas baseChart
+	  [id]="options.id"
       [datasets]="options.chartData"
       [labels]="options.labels"
       [options]="options.chartOptions"

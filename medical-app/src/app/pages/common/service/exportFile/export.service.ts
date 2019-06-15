@@ -20,10 +20,10 @@ export class ExportFilesService {
          .catch((err:any )=> console.log('Error writing excel export', err));
    }
 
-   exportHtmlToFile(fileType:string, elemId:string, filename:string) {
+   exportToPdf(elemId:string, filename:string) {
       const exportAsService = new ExportAsService();
       const exportAsConfig: ExportAsConfig = {
-         type: fileType,
+         type: 'pdf',
          elementId: elemId,
          options: {
            orientation: 'landscape',
