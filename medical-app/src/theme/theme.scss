@@ -219,17 +219,20 @@ ion-list.list-radio{
         padding:0;
         --background: transparent;
         &.item{
-            --min-height:40px;
-            --inner-border-width: 0px;
-            --padding-start: 0px;
+                --min-height:40px;
+                --inner-border-width: 0px;
+                --padding-start: 0px;
             &.small-item {
                 --min-height: 29px;
             }
         }
         ion-radio{
             &.radio{
-            margin: 5px 5px 5px 0px;
-            --color-checked: #888;
+                margin: 5px 5px 5px 0px;
+                --color-checked: #888;
+                width:15px;
+                height:15px;
+                --border-width: 1px;
             }
         }
     }
