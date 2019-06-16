@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  public imgURL ="../../assets/images/logo.png";
-  constructor() { }
-
-  ngOnInit() {
+  public imgURL = '../../assets/images/logo.png';
+  constructor(public router: Router) {
   }
 
+  ngOnInit() {}
+
+  onLoggedin() {
+      localStorage.setItem('isLoggedin', 'true');
+  }
 }
