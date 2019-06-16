@@ -17,4 +17,7 @@ export class LayoutComponent {
     public navCtrl: NavController
   ) {
   }
+  onLoggedout() {
+    localStorage.removeItem('isLoggedin');
+  }
 }
