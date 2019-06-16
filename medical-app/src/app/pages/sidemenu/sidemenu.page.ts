@@ -7,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidemenuPage implements OnInit {
     public appPages: any;
+    public imgURL ="../../assets/images/logo.png";
   constructor() {
     this.appPages = [
   {
     title: 'Dashboard',
     url: '/dashboard',
     direct: 'forward',
-    icon: 'home',
+    icon: 'analytics',
   },
   {
     title: 'Students',
@@ -29,41 +30,43 @@ export class SidemenuPage implements OnInit {
   },
   {
     title: 'Student Profile',
+    icon: 'person',
     children: [
       {
         title: 'Basic Information',
         url: '/student-profile/basic-info',
         direct: 'root',
-        icon: 'add'
+        icon: ''
       },
       {
         title: 'Address',
         url: '/student-profile/address-info',
         direct: 'forward',
-        icon: 'home'
+        icon: ''
       },
       {
         title: 'Picture',
         url: '/student-profile/address',
         direct: 'forward',
-        icon: 'reverse-camera'
+        icon: ''
       },
     ]
   },
   {
     title: 'Diagonisis',
+    icon: 'pulse',
     children: [
       {
         title: 'Present Medical History',
         url: '/diagnosis/medical-info',
         direct: 'root',
-        icon: 'add'
+        icon: ''
       },
       {
         title: 'Anthropometric Measurement',
         url: '/diagnosis/anthropometric-info',
         direct: 'forward',
-        icon: 'add'
+        icon: ''
       },
       {
         title: 'Physical Examination',

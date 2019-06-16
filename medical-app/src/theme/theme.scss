@@ -171,13 +171,21 @@ ion-select {
     }
 }
 
+ion-list {
+    background: transparent !important;
+}
+
+ion-item {
+    --border-width: 0;
+    --border-color: transparent;
+    --background: transparent;
+}
+
 /*Textarea*/
 ion-item.textarea-list,
 div.textarea-list{
-    --border-width: 0px;
     width:100%;
 }
-
 ion-textarea{
     &.textarea{
         &.small-height {

@@ -16,9 +16,14 @@
     --border-radius: 0;
 }
 
-.container {
-    max-width: 1140px;
-    margin: auto;
+.holder {
+    padding: 20px 50px;
+}
+
+@media (max-width:480px) {
+    .holder {
+        padding: 0;
+    }
 }
 
 .blue-gradient {
@@ -45,4 +50,8 @@
 ion-progress-bar {
     border-radius: 10px;
     height: 16px;
+}
+
+ion-content {
+    --background: var(--custom-body-color-light);
 }
