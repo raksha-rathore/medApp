@@ -11,11 +11,14 @@ const routes: Routes = [
         { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardPageModule' },
         { path: 'bmi', loadChildren: './bmi/bmi.module#BmiPageModule' },
         { path: 'mensuration', loadChildren: './mensuration/mensuration.module#MensurationPageModule' },
-        { path: 'medications', loadChildren: './medications/medications.module#MedicationPageModule' },
-        { path: 'family-history', loadChildren: './family-history/family-history.module#FamilyHistoryPageModule' },
+        { path: 'training', loadChildren: './trainings/training.module#TrainingModule' },
         { path: 'student-profile', loadChildren: './student-profile/student-profile.module#StudentProfilePageModule' },
         { path: 'diagnosis', loadChildren: './diagnosis/diagnosis.module#DiagnosisPageModule' },
-        { path: 'students', loadChildren: './students/students.module#StudentsPageModule' }
+        { path: 'students', loadChildren: './students/students.module#StudentsPageModule' },
+        { path: 'medical-profile', loadChildren: './medical-profile/medical-profile.module#MedicalProfilePageModule' },
+        { path: 'medications', loadChildren: './medications/medications.module#MedicationsPageModule' },
+        { path: 'morbidity', loadChildren: './morbidity/morbidity.module#MorbidityPageModule' },
+        { path: 'mensuration', loadChildren: './mensuration/mensuration.module#MensurationPageModule' }
       ]
   }
 ];
