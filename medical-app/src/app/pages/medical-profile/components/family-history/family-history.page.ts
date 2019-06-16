@@ -9,6 +9,7 @@ export class FamilyHistoryPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

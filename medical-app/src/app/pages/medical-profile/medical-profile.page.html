@@ -1,0 +1,15 @@
+<ion-content>
+    <ion-grid class="p-30 mob-p-15">
+      <ion-row class="full-width">
+        <ul class="stepper full-width">
+          <li class="active" routerLink="./family-history">Family History</li>
+          <li routerLink="./birth-history">Birth History</li>
+          <li  routerLink="./immunization">Immunization</li>
+          <li  routerLink="./medical-surgical-info">Medical & Surgical</li>
+        </ul>
+      </ion-row>
+    </ion-grid>
+    <ng-container>
+      <router-outlet></router-outlet>
+    </ng-container>
+  </ion-content>

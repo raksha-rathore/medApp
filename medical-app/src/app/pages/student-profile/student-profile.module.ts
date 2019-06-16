@@ -6,27 +6,6 @@ import { IonicModule } from '@ionic/angular';
 import { StudentProfilePage } from './student-profile.page';
 import { AddressPage } from './components/address/address.page';
 import { BasicInfoPage } from './components/basic-info/basic-info.page';
-// const routes: Routes = [
-//   {
-//     path: '',
-//     component: StudentProfilePage,
-//     loadChildren:'./components/basic-info/basic-info.module#BasicInfoPageModule'
-//   },
-//   {
-//     path: 'basic-info',
-//     component: BasicInfoPage,
-//   },
-//   {
-//     path: 'address',
-//    component: AddressPage,
-//     loadChildren:'./components/address/address.module#AddressPageModule'
-//   },
-//   {
-//     path: 'pic-upload',
-//     component: PicUploadPage
-//   },
-// ];
-
 const routes: Routes = [
   {
     path: '',
@@ -58,9 +37,5 @@ const routes: Routes = [
     // PicUploadPage,
     StudentProfilePage
    ]
-  // exports:[
-  //   RouterModule,
-  //   StudentProfilePageModule
-  // ]
 })
 export class StudentProfilePageModule {}
