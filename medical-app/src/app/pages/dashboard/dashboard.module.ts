@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-
-import { IonicModule } from '@ionic/angular';
 
 import { DashboardPage } from './dashboard.page';
 
 import { AnalyticsService }from '../common/service/analytics/analytics.service';
+import { ExportFilesService } from '../common/service/exportFile/export.service';
 import { AnalyticsLineChart } from './charts/analytics.line';
 import { AnalyticsBarChart } from './charts/analytics.bar';
 import { AnalyticsDoghnutChart } from './charts/analytics.doghnut';
-import { ChartsModule } from 'ng2-charts';
-import { ChartComponent } from '../common/templates/charts/chart.component';
+import { Common } from '../common/common.module';
+import { NgxPrintModule } from 'ngx-print';
 
 
 const routes: Routes = [
@@ -27,18 +24,16 @@ const components = [
   AnalyticsLineChart,
   AnalyticsBarChart,
   AnalyticsDoghnutChart,
-  ChartComponent
 ];
 
 const modules = [
-  CommonModule,
-  FormsModule,
-  IonicModule,
-  ChartsModule
+  Common,
+  NgxPrintModule
 ];
 
 const providers = [
-  AnalyticsService
+  AnalyticsService,
+  ExportFilesService
 ];
 
 

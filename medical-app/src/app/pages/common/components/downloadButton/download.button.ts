@@ -1,5 +1,4 @@
 import { Component, OnInit, Input  } from '@angular/core';
-//import * as $ from 'jquery';
 
 @Component({
   selector: 'med-download',
@@ -16,4 +15,6 @@ export class DownloadButton implements OnInit {
     ngOnInit() {
 
     }
+    private width:string = "15px";
+    private height:string = "15px";
 }

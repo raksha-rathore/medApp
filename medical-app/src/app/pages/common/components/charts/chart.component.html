@@ -1,4 +1,9 @@
-<div style="display: block;" [style.width]="options.width" [style.height]="options.height">
+<div
+  style="display: block;"
+  [style.width]="options.width"
+  [style.height]="options.height"
+  [id]="options.id"
+  [class]="options.cssClass">
     <canvas baseChart
       [datasets]="options.chartData"
       [labels]="options.labels"
