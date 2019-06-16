@@ -14,6 +14,6 @@ export class DownloadButton implements OnInit {
     ngOnInit() {
 
     }
-    private width:string = "30px";
-    private height:string = "30px";
+    private width:string = "15px";
+    private height:string = "15px";
 }

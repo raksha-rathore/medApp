@@ -39,4 +39,8 @@ export class ExportFilesService {
          console.log(content);
        });*/
    }
+
+   exportToPrinter(elemId:string) {
+      
+   }
 }

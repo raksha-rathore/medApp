@@ -15,8 +15,8 @@ export class AnalyticsBarChart implements OnInit {
     responsive: true
   };
   private options = {
-	id:  "analytics-bar-chart",
-	cssClass: 'dashboardChart',
+	  id:  "analytics-bar-chart",
+	  cssClass: 'dashboardChart',
     width: "400px",
     height: "200px",
     chartData: this.service.getBarChartData(),
@@ -30,12 +30,17 @@ export class AnalyticsBarChart implements OnInit {
   }
    private downloadOptions = {
     id: "analytics-bar-download",
-	handler: () => this.export(),
-	iconDownload: true
+	  handler: () => this.export(),
+	  iconDownload: true
   };
-  
+  private printOptions ={
+    id: "analytics-bar-chart"
+  };
    export() {
 	  this.exportService.exportToPdf("analytics-bar-chart", "analytics-bar-chart");
+  }
+  print() {
+    this.exportService.exportToPrinter("analytics-bar-chart");
   }
 
   ngOnInit() {
