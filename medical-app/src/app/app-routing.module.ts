@@ -16,6 +16,7 @@ const routes: Routes = [
   // { path: 'present-medical-history', loadChildren: './diagnosis/components/present-medical-history/present-medical-history.module#PresentMedicalHistoryPageModule' },
   // { path: 'anthropometric-measeurements', loadChildren: './diagnosis/components/anthropometric-measeurements/anthropometric-measeurements.module#AnthropometricMeaseurementsPageModule' },
   { path: 'students', loadChildren: './pages/students/students.module#StudentsPageModule' }
+  
 ];
 
 @NgModule({

@@ -20,7 +20,7 @@ export class ExportFilesService {
          .catch((err:any )=> console.log('Error writing excel export', err));
    }
 
-   exportHtmlToFile(fileType:string, elemId:string, filename:string) {
+   exportHtmlToFile(fileType:any, elemId:string, filename:string) {
       const exportAsService = new ExportAsService();
       const exportAsConfig: ExportAsConfig = {
          type: fileType,

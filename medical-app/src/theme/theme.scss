@@ -6,19 +6,19 @@
 .menu-content >.ion-page >ion-content{
     --background:#f4f7fa;
 }
-.btn,button{
-	cursor:pointer;
-	vertical-align:middle;
-	position:relative;
-	display:inline-block;
-	font-size:13px;
-    --padding: 10px 20px;
-    --border-radius: 0.25rem;
-    font-size: 14px;
-	line-height:1.41;
-    --background:transparent;
-    --border:1px solid transparent;
+.btn, button{
+    vertical-align: middle !important;
+    position: relative;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+    line-height: 1.41 !important;
+    --background: transparent;
+    border: none !important;
     text-transform: capitalize;
+    box-shadow:none !important;
+    -webkit-appearance:none !important;
+    padding:0 !important;
+    height:40px;
 }
 .btn-success{
 	background-color: #5cb85c !important;
@@ -30,10 +30,9 @@
     border-color: #398439 !important;
 }
 .btn-primary, .btn-primary:focus,.btn-primary:hover {
-    background-color: #04a9f5;
-    border-color: #04a9f5;
+    background-color: #04a9f5 !important;
+    border-color: #04a9f5 !important;
     color:#fff !important;
-   
 }
 .btn-danger{
 	background-color:#c9302c !important;
@@ -228,7 +227,7 @@ ion-list.list-radio{
         }
         ion-radio{
             &.radio{
-                margin: 5px 5px 5px 0px;
+                margin: 5px 5px 5px 0px !important;
                 --color-checked: #888;
                 width:15px;
                 height:15px;
@@ -390,6 +389,8 @@ ion-card{
     vertical-align: middle;
     text-align:left;
     color:black;
+    display: flex;
+    width: 100%;
 }
 .table-container tr, .table-container thead tr {
     // height: 40px;
@@ -435,7 +436,7 @@ ion-card{
     padding:0;
 }
 .custom-table > table > tbody {
-    height:calc(100vh - 310px);
+    height:calc(100vh - 350px);
     display:block;
     overflow:auto;
     width:100%;
@@ -573,7 +574,7 @@ ion-card{
 .student-export-dropdown{
     display: inline-block;
     float: right;
-    margin: 5px;
+    margin: 5px 5px 10px 5px;
 }
 .download-button {
     background-color: #04a9f5!important;

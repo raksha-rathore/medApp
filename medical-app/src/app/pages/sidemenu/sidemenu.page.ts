@@ -65,6 +65,12 @@ export class SidemenuPage implements OnInit {
         direct: 'forward',
         icon: 'add'
       },
+      {
+        title: 'Physical Examination',
+        url: '/diagnosis/physical-examination-info',
+        direct: 'forward',
+        icon: 'add'
+      }
     ]
   }
   ];

@@ -8,7 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { DiagnosisPage } from './diagnosis.page';
 import { PresentMedicalHistoryPage } from './components/present-medical-history/present-medical-history.page';
 import { AnthropometricMeaseurementsPage } from './components/anthropometric-measeurements/anthropometric-measeurements.page';
-
+import { PhysicalExaminationPage } from './components/physical-examination/physical-examination.page';
 const routes: Routes = [
   {
     path: '',
@@ -21,6 +21,10 @@ const routes: Routes = [
       {
         path: 'anthropometric-info',
         component: AnthropometricMeaseurementsPage
+      },
+      {
+        path: 'physical-examination-info',
+        component: PhysicalExaminationPage
       }
     ]
   }
@@ -37,7 +41,8 @@ const routes: Routes = [
   declarations: [
     DiagnosisPage,
     PresentMedicalHistoryPage,
-    AnthropometricMeaseurementsPage
+    AnthropometricMeaseurementsPage,
+    PhysicalExaminationPage
   ]
 })
 export class DiagnosisPageModule {}

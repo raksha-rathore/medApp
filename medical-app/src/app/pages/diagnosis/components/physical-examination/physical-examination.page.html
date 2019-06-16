@@ -1,0 +1,1370 @@
+<ion-grid class="p-30 mob-p-15">
+  <form>
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(0)" class="accordion-head" [ngClass]="this.groups[0].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Head</ion-title>
+        <ion-icon *ngIf="!this.groups[0].show" class="plus" name="arrow-dropright"></ion-icon>
+        <ion-icon *ngIf="this.groups[0].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[0].show" class="accordion-content">
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Hair eventually distributed on scalp?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Hair looks dull?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Hair brittle?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Lice?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Injuries?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Dandruff?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Hairfall?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(1)" class="accordion-head" [ngClass]="this.groups[1].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Eyes</ion-title>
+        <ion-icon *ngIf="!this.groups[1].show" float-right name="arrow-dropright" class="plus"></ion-icon>
+        <ion-icon *ngIf="this.groups[1].show" float-right class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[1].show" class="accordion-content">
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Symmetry?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Redness?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Itching?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Any discharges?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Shot sight?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Long sight?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Blurred vision?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Squint?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Ptosis?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Bitot spots?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Night Blindness?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Nystagmus?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(2)" class="accordion-head" [ngClass]="this.groups[2].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Nose</ion-title>
+        <ion-icon *ngIf="!this.groups[2].show" name="arrow-dropright" class="plus"></ion-icon>
+        <ion-icon *ngIf="this.groups[2].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[2].show" class="accordion-content">
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Septal & deviator?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Nose dischare?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Nose Bleed?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(3)" class="accordion-head" [ngClass]="this.groups[3].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Ear</ion-title>
+        <ion-icon *ngIf="!this.groups[3].show" name="arrow-dropright" class="plus"></ion-icon>
+        <ion-icon *ngIf="this.groups[3].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[3].show" class="accordion-content">
+        <ion-col size-xs="12" size-md="6" size-lg="6" size-sm="6" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Discharges?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="6" size-lg="6" size-sm="6" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Hearing Defects?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="4" size-md="4" size-xs="4" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(4)" class="accordion-head" [ngClass]="this.groups[4].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Neck</ion-title>
+        <ion-icon *ngIf="!this.groups[4].show" name="arrow-dropright" class="plus"></ion-icon>
+        <ion-icon *ngIf="this.groups[4].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[4].show" class="accordion-content">
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Range of Motion?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Lymph nodules?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Tonsillitis?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Thyroid?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Enlargement?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(5)" class="accordion-head" [ngClass]="this.groups[5].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Mouth</ion-title>
+        <ion-icon *ngIf="!this.groups[5].show" name="arrow-dropright" class="plus"></ion-icon>
+        <ion-icon *ngIf="this.groups[5].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[5].show" class="accordion-content">
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Angular Stomatitis?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Bleeding Gums?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Tongue Pallor?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Bad breath?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Tongue cyanosis?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Cleft lip?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Palate / Others?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(6)" class="accordion-head" [ngClass]="this.groups[6].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Chest</ion-title>
+        <ion-icon *ngIf="!this.groups[6].show" name="arrow-dropright" class="plus"></ion-icon>
+        <ion-icon *ngIf="this.groups[6].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[6].show" class="accordion-content">
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Chest Symmetry?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">If any nodules?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">If any tenderness?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Heart Sounds(s1 & s2)?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Thrills?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Others?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Respiratory Rate?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Normal</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Normal" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">Abnormal</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Abnormal"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Breathlessness?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Signs of congenital heart diseases?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Signs of rheumatic heart diseases?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(7)" class="accordion-head" [ngClass]="this.groups[7].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Skin</ion-title>
+        <ion-icon *ngIf="!this.groups[7].show" name="arrow-dropright" class="plus"></ion-icon>
+        <ion-icon *ngIf="this.groups[7].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[7].show" class="accordion-content">
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">White Patches?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Scabies?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Ring Worm?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Rashes?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Itches?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Others?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(8)" class="accordion-head" [ngClass]="this.groups[8].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Nails</ion-title>
+        <ion-icon *ngIf="!this.groups[8].show" name="arrow-dropright" class="plus"></ion-icon>
+        <ion-icon *ngIf="this.groups[8].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[8].show" class="accordion-content">
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Flattening?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Clubing?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Others?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(9)" class="accordion-head" [ngClass]="this.groups[9].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Extrenities</ion-title>
+        <ion-icon *ngIf="!this.groups[9].show" name="arrow-dropright" class="plus"></ion-icon>
+        <ion-icon *ngIf="this.groups[9].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[9].show" class="accordion-content">
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Injuries?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Range of Motion?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Club foot?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Weakness of limbs?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4" size-lg="4" size-sm="4" class="pl-20 mob-pl-0 mob-pr-0">
+          <ion-list-header class="head pl-0 full-width">
+            <ion-label class="radio-label full-width">Deformity of limbs?</ion-label>
+          </ion-list-header>
+          <ion-list class="list-radio full-width no-padding">
+            <ion-radio-group class="display-flex">
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item">
+                  <ion-label class="radio-label">Yes</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="Yes"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                <ion-item class="item-border">
+                  <ion-label class="radio-label">No</ion-label>
+                  <ion-radio class="radio m-5" slot="start" value="No" checked></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   <ion-row style="background:#fff;width:100%;bottom:0px;right:45px;">
+      <ion-col size="12" class="submitButton no-padding">
+        <ion-button type="submit" class="btn btn-primary">
+          Save and Continue<ion-icon name="arrow-forward" class="ml-5"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-grid>

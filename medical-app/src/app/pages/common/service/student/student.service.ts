@@ -18,6 +18,7 @@ export class StudentService extends StudentDataService {
             studentClass = 6;
           }
           let studentObj = {
+            action:'ViewStudent',
             class: studentClass,
             age: age,
             name: NamesList[index]+' '+lastNames[index]

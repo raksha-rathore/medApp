@@ -31,7 +31,10 @@ export class StudentsPage {
             list: this.parsedClassList(),
           },
         },
-      }
+      },
+      action: {
+        title: 'Action'
+      },
     }
   };
 

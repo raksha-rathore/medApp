@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { StudentService } from '../common/service/student/student.service';
-import { ExportFilesService } from  '../common/service/exportFile/export.service'
+import { StudentService } from '../../common/service/student/student.service';
+import { ExportFilesService } from  '../../common/service/exportFile/export.service'
 
 @Component({
   selector: 'app-students',
