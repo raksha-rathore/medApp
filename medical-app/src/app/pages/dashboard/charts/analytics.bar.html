@@ -1,7 +1,15 @@
 <div class="chart-container">
-    <ion-card class="bg-white form-card mob-p-10 pt-0">
-        <div class="student-export-dropdown">
-            <med-download [options]="downloadOptions"></med-download>
+    <ion-card class="bg-white analytics-card mob-p-10">
+        <div class="chart-export-dropdown">
+            <button class="analytics-export-button">
+                <med-download [options]="downloadOptions"></med-download>
+            </button>
+            <button
+                class=".btn .btn-primary analytics-export-button"
+                [printSectionId]="printOptions.id" 
+                ngxPrint>
+                <ion-icon name="print" [style.width]="'15px'" [style.height]="'15px'" ></ion-icon>
+            </button>
         </div>
         <med-chart [options]="options"></med-chart>
     </ion-card>

@@ -9,6 +9,7 @@ import { AnalyticsLineChart } from './charts/analytics.line';
 import { AnalyticsBarChart } from './charts/analytics.bar';
 import { AnalyticsDoghnutChart } from './charts/analytics.doghnut';
 import { Common } from '../common/common.module';
+import { NgxPrintModule } from 'ngx-print';
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const components = [
 ];
 
 const modules = [
-  Common
+  Common,
+  NgxPrintModule
 ];
 
 const providers = [

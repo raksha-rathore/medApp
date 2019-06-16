@@ -10,7 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {
     ChartComponent, 
     DownloadButton,
-    TableComponent
+    TableComponent,
 } from './components';
 
 import {
@@ -26,13 +26,13 @@ const BASE_MODULES = [
     IonicModule,
     ExportAsModule,
     ChartsModule,
-    Ng2SmartTableModule
+    Ng2SmartTableModule,
 ];
 
 const COMPONENTS = [
     ChartComponent,
     DownloadButton,
-    TableComponent
+    TableComponent,
 ];
 
 const PROVIDERS = [

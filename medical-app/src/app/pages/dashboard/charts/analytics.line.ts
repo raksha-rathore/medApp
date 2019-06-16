@@ -21,7 +21,7 @@ export class AnalyticsLineChart implements OnInit {
     chartData: this.service.getLineChartData(),
     labels:this.service.getLineChartLabels(),
     chartOptions: this.extraOptions,
-    colorProps: this.service.getColorProps(),
+    //colorProps: this.service.getColorProps(),
     legend: true,
     chartType: 'line',
     onClick: this.onClick,
@@ -32,6 +32,9 @@ export class AnalyticsLineChart implements OnInit {
     id: "analytics-line-download",
 	handler: () => this.export(),
 	iconDownload: true
+  };
+  private printOptions ={
+    id: "analytics-line-chart"
   };
   
    export() {
