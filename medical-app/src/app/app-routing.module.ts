@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './shared';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -13,7 +14,9 @@ const routes: Routes = [
   { path: 'students', loadChildren: './pages/students/students.module#StudentsPageModule' },
   { path: 'medical-profile', loadChildren: './pages/medical-profile/medical-profile.module#MedicalProfilePageModule' },
   { path: 'medications', loadChildren: './pages/medications/medications.module#MedicationsPageModule' },
-  { path: 'morbidity', loadChildren: './pages/morbidity/morbidity.module#MorbidityPageModule' }
+  { path: 'morbidity', loadChildren: './pages/morbidity/morbidity.module#MorbidityPageModule' },
+  { path: '', loadChildren: './pages/layout.module#LayoutModule', canActivate: [AuthGuard]},
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
 ];
 
 @NgModule({
