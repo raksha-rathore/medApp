@@ -12,6 +12,8 @@ const routes: Routes = [
         { path: 'bmi', loadChildren: './bmi/bmi.module#BmiPageModule' },
         { path: 'mensuration', loadChildren: './mensuration/mensuration.module#MensurationPageModule' },
         { path: 'training', loadChildren: './trainings/training.module#TrainingModule' },
+        { path: 'medications', loadChildren: './medications/medications.module#MedicationsPageModule' },
+        // { path: 'family-history', loadChildren: './family-history/family-history.module#FamilyHistoryPageModule' },
         { path: 'student-profile', loadChildren: './student-profile/student-profile.module#StudentProfilePageModule' },
         { path: 'diagnosis', loadChildren: './diagnosis/diagnosis.module#DiagnosisPageModule' },
         { path: 'students', loadChildren: './students/students.module#StudentsPageModule' },

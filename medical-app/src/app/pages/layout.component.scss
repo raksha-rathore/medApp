@@ -1,3 +1,30 @@
+.split-pane-md.split-pane-visible>.split-pane-side {
+    max-width: 264px;
+    width: 100%;
+    box-shadow: 1px 0 20px 0 var(--custom-sidebar-bg) !important;
+
+    &.content-area {
+        max-width: calc(100% - 264px) !important;
+
+        ion-toolbar {
+            box-shadow: 0px -3px 5px 0 var(--custom-sidebar-bg) !important;
+        }
+    }
+}
+
+.split-pane-side.content-area {
+    display: block !important;
+    width: 100%;
+}
+
+ion-menu {
+    --background: var(--custom-sidebar-bg);
+
+    app-sidemenu {
+        height: 100%;
+    }
+}
+
 .customised-card {
     ion-col {
         position: relative;
