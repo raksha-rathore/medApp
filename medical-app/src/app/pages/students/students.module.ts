@@ -5,6 +5,7 @@ import { StudentsPage } from './students.page';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { StudentService } from '../common/service/student/student.service';
 import { ExportFilesService } from '../common/service/exportFile/export.service';
+import { SidemenuService } from '../common/service/sidemenu/sidemenu.service';
 import { Common } from '../common/common.module';
 
 const routes: Routes = [
@@ -21,6 +22,6 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [StudentsPage],
-  providers: [StudentService, ExportFilesService]
+  providers: [StudentService, ExportFilesService, SidemenuService]
 })
 export class StudentsPageModule {}

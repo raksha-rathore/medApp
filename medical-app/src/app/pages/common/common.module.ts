@@ -16,7 +16,8 @@ import {
 import {
     AnalyticsService,
     ExportFilesService,
-    StudentService
+    StudentService,
+    SidemenuService
 } from './service'
 
 const BASE_MODULES = [
@@ -38,7 +39,8 @@ const COMPONENTS = [
 const PROVIDERS = [
     AnalyticsService,
     ExportFilesService,
-    StudentService
+    StudentService,
+    SidemenuService
 ];
 
 @NgModule({

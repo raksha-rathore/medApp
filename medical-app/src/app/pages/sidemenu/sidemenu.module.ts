@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { SidemenuService } from '../common/service/sidemenu/sidemenu.service';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -21,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [SidemenuPage]
+  declarations: [SidemenuPage],
+  providers: [SidemenuService]
 })
 export class SidemenuPageModule {}

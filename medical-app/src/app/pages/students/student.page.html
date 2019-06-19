@@ -5,6 +5,8 @@
 </ion-header>
 <div class="table-container mob-p-15">
     <ion-card class="bg-white form-card mob-p-10 pt-0">
+        Here: {{message}}
+        <button (click)="newMessage()" class="btn btn-primary">Send Message</button>
         <div class="student-export-dropdown">
             <med-download [options]="downloadOptions"></med-download>
         </div>

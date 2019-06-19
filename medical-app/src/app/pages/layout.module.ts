@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { LayoutComponent } from './layout.component';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { SidemenuPage } from './sidemenu/sidemenu.page';
+import { SidemenuService } from './common/service/sidemenu/sidemenu.service';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { SidemenuPage } from './sidemenu/sidemenu.page';
   providers: [
     StatusBar,
     SplashScreen,
+    SidemenuService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ]
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SidemenuService } from '../common/service/sidemenu/sidemenu.service';
 
 @Component({
   selector: 'app-sidemenu',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidemenuPage implements OnInit {
   public appPages: any;
+  public staticPages: any;
+  public dynamicPages: any;
+  message:string;
   public imgURL = "../../assets/images/logo.png";
-  constructor() {
-    this.appPages = [
+  
+  constructor(private sidemenu: SidemenuService) {
+
+    this.sidemenu.getMessage().subscribe((message: string) => {console.log('message ==>', message); this.message = message;});
+
+    this.staticPages = [
       {
         title: 'Dashboard',
         url: '/dashboard',
@@ -136,10 +144,15 @@ export class SidemenuPage implements OnInit {
         direct: 'forward',
         icon: 'medkit',
       }
-    ]
+    ];
+
+    this.appPages = this.staticPages;
+
   }
   ngOnInit() {
-      }
+
+    
+  }
 
 
 
