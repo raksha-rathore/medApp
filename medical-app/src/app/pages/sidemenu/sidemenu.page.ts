@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-sidemenu',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidemenu.page.scss'],
 })
 export class SidemenuPage implements OnInit {
-  public appPages: any;
-  public imgURL = "../../assets/images/logo.png";
-  constructor() {
+  showMenu: any;
+  appPages: any;
+  imgURL: string;
+
+  constructor(private router: Router) {
     this.appPages = [
       {
         title: 'Dashboard',
@@ -136,11 +139,42 @@ export class SidemenuPage implements OnInit {
         direct: 'forward',
         icon: 'medkit',
       }
-    ]
-  }
-  ngOnInit() {
+    ];
+    // use this code if the ion toggle menu does not work when click on menu items.
+    /*this.router.events.subscribe(val => {
+      if (val instanceof NavigationEnd && window.innerWidth <= 992) {
+          this.hideSidebar();
       }
+    });*/
+  }
 
+  ngOnInit() {
+    this.showMenu = '';
+    this.imgURL = '../../assets/images/logo.png';
+  }
 
+  /*hideSidebar() {
+    add logic here to hide side  navigation bar if the ion toggle node does not work
+    const dom: any = document.querySelector('ion-menu');
+    dom.classList.remove('show-menu');
+  }*/
 
+  onMenuClick(menuItem: object) {
+    this.showMenu = menuItem === this.showMenu ? '0' : menuItem;
+  }
+
+  isActive(menuItem: any): boolean {
+    const isActive = this.router.url === menuItem.url;
+    return ( isActive || this.hasActiveChild(menuItem));
+  }
+
+  hasActiveChild(menuItem: any): boolean {
+    let activeChild = [];
+    if (menuItem.children) {
+      activeChild = menuItem.children.filter(submenu => {
+        return ( this.router.url === submenu.url);
+      });
+    }
+    return (activeChild.length !== 0);
+  }
 }
