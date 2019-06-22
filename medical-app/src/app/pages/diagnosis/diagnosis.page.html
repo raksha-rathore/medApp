@@ -1,10 +1,12 @@
 <ion-content>
+  <ion-grid class="p-30 mob-p-15">
     <ion-row class="full-width">
-        <ul class="stepper full-width">
-          <li class="active" routerLink="./medical-info">Present Medical Info</li>
-          <li routerLink="./anthropometric-info">Anthropometric Measurements</li>
-          <li  routerLink="./physical-examination-info">Physical Examination</li>
-        </ul>
-      </ion-row>
-      <router-outlet></router-outlet>
+      <ul class="stepper full-width">
+        <li class="active" routerLink="./medical-info">Present Medical Info</li>
+        <li routerLink="./anthropometric-info">Anthropometric Measurements</li>
+        <li routerLink="./physical-examination-info">Physical Examination</li>
+      </ul>
+    </ion-row>
+  </ion-grid>
+  <router-outlet></router-outlet>
 </ion-content>

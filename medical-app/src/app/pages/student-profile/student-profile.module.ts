@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { StudentProfilePage } from './student-profile.page';
 import { AddressPage } from './components/address/address.page';
 import { BasicInfoPage } from './components/basic-info/basic-info.page';
+import { PicUploadPage } from './components/pic-upload/pic-upload.page';
 const routes: Routes = [
   {
     path: '',
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         path: 'address-info',
         component: AddressPage
+      },
+      {
+        path: 'pic-upload',
+        component: PicUploadPage
       }
     ]
   }
@@ -34,7 +39,7 @@ const routes: Routes = [
   declarations: [
     AddressPage,
     BasicInfoPage,
-    // PicUploadPage,
+    PicUploadPage,
     StudentProfilePage
    ]
 })

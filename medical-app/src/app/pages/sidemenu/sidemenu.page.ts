@@ -45,8 +45,8 @@ export class SidemenuPage implements OnInit {
             icon: ''
           },
           {
-            title: 'Picture',
-            url: '/student-profile/address',
+            title: 'Pic Upload',
+            url: '/student-profile/pic-upload',
             direct: 'forward',
             icon: ''
           },
@@ -69,7 +69,7 @@ export class SidemenuPage implements OnInit {
             icon: ''
           },
           {
-            title: 'Picture',
+            title: 'Immunization',
             url: '/medical-profile/immunization',
             direct: 'forward',
             icon: ''
@@ -83,7 +83,7 @@ export class SidemenuPage implements OnInit {
         ]
       },
       {
-        title: 'Diagonisis',
+        title: 'Diagnosis',
         icon: 'pulse',
         children: [
           {
@@ -111,7 +111,7 @@ export class SidemenuPage implements OnInit {
         icon: 'pulse',
         children: [
           {
-            title: 'Medications',
+            title: 'Deworming Medicine',
             url: '/medications/deworming-medicine',
             direct: 'root',
             icon: ''

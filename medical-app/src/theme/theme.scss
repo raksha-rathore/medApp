@@ -201,7 +201,7 @@ ion-textarea{
         --placeholder-color: #888;
         background: #f4f7fa;
         font-size: 14px;
-        height: 50px;
+        height: 55px;
         border-radius: .25rem;
         line-height: 1.5;
     }
@@ -312,6 +312,8 @@ select {
     text-align: center;
     cursor: pointer;
     font-size:12px;
+    outline:none;
+    border:none
 }
 .stepper li::before {
     content:counter(step); 
@@ -341,6 +343,7 @@ select {
 }
 .stepper li.active {
     color:#0453A0;
+    outline:none;
 }
 .stepper li.active::before {
     border-color:#0453A0;
@@ -353,7 +356,7 @@ select {
     font-size:17px;
     background: white;
     border-bottom: 1px solid #f1f1f1;
-    padding: 20px 30px;
+    padding: 20px 30px 20px 20px;
     color:#000000;
     font-size: 17px;
     font-weight: 400;
@@ -461,7 +464,7 @@ ion-card{
     padding:0;
 }
 .custom-table > table > tbody {
-    height:calc(100vh - 350px);
+    height:calc(100vh - 380px);
     display:block;
     overflow:auto;
     width:100%;
@@ -469,6 +472,7 @@ ion-card{
 .custom-table > table > thead{
     width: 100% !important;
     display: block;
+    margin-top:30px;
 }
 /*pagination*/
 .ng2-smart-pagination-nav{
@@ -483,7 +487,8 @@ ion-card{
     display: flex;
     padding-left: 0;
     list-style: none;
-    border-radius: .25rem
+    border-radius: .25rem;
+    margin-top: 1rem;
 }
 
 .page-link {
@@ -645,11 +650,9 @@ ion-title {
 
     &:before {
         content: '';
-        position: absolute;
-        left: 10px;
-        top: 4px;
-        bottom: 4px;
-        width: 4px;
+        width: 3px;
+        margin-right: 10px;
+        height: 25px;
         background: var(--custom-color-blue);
     }
 }
