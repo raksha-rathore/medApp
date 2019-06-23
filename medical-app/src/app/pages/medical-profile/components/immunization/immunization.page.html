@@ -1,9 +1,58 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>immunization</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<ion-grid class="p-30 mob-p-15">
+  <form>
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(0)" class="accordion-head"
+        [ngClass]="this.groups[0].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Past Immunization History</ion-title>
+        <ion-icon *ngIf="!this.groups[0].show" class="plus" name="arrow-dropright"></ion-icon>
+        <ion-icon *ngIf="this.groups[0].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[0].show" class="accordion-content">
+        <div class="three-pattern" *ngFor="let vaccinationName of vaccinationNamesList;">
+          <ion-col size-xs="12" size-md="12" size-lg="12" size-sm="12" class="pl-20 mob-pl-0 mob-pr-0">
+            <ion-list-header class="head pl-0 full-width">
+              <ion-label class="radio-label full-width">{{vaccinationName.VaccinationName}}</ion-label>
+            </ion-list-header>
+            <ion-list class="list-radio full-width no-padding">
+              <ion-radio-group class="display-flex">
+                <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                  <ion-item class="item">
+                    <ion-label class="radio-label">Yes</ion-label>
+                    <ion-radio class="radio m-5" slot="start" value="Yes" checked></ion-radio>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" class="col-align">
+                  <ion-item class="item-border">
+                    <ion-label class="radio-label">No</ion-label>
+                    <ion-radio class="radio m-5" slot="start" value="No"></ion-radio>
+                  </ion-item>
+                </ion-col>
+              </ion-radio-group>
+            </ion-list>
+            <ion-textarea class="textarea" placeholder="Enter remarks"></ion-textarea>
+          </ion-col>
+        </div>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="bg-white accordion-grid no-padding mob-p-10 mb-20">
+      <ion-row (click)="open(1)" class="accordion-head"
+        [ngClass]="this.groups[1].show ? 'no-border-radius' : 'border-radius'">
+        <ion-title class="accordion-title">Present Immunization History</ion-title>
+        <ion-icon *ngIf="!this.groups[1].show" class="plus" name="arrow-dropright"></ion-icon>
+        <ion-icon *ngIf="this.groups[1].show" class="minus" name="arrow-dropdown"></ion-icon>
+      </ion-row>
+      <ion-row *ngIf="groups[1].show" class="accordion-content">
+        <ion-col>
+          Present present medical history data
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <ion-row class="mt-15">
+    <ion-col size="12" class="submitButton no-padding">
+      <ion-button type="submit" class="btn btn-primary">
+        Save and Continue<ion-icon name="arrow-forward" class="ml-5"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
