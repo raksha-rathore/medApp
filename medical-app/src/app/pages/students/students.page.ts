@@ -3,6 +3,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 import { StudentService } from '../common/service/student/student.service';
 import { ExportFilesService } from '../common/service/exportFile/export.service';
 import { SidemenuService } from '../common/service/sidemenu/sidemenu.service';
+import { DataService } from '../common/service/data/data.service';
 
 @Component({
   selector: 'app-students',
@@ -12,14 +13,19 @@ export class StudentsPage {
 
   message:string;
 
-  constructor(private service: StudentService, private exportService: ExportFilesService, private sidemenu: SidemenuService) {
+  constructor(private service: StudentService, private exportService: ExportFilesService, private sidemenu: SidemenuService,
+    private dataservice: DataService) {
     const data = this.service.getAllStudents();
     console.log('data ==>', data);
     this.options.source.load(data);
   }
 
   ngOnInit() {
-    // this.sidemenu.currentMessage.subscribe(message => this.message = message);
+    this.dataservice.currentMessage.subscribe(message => this.message = message);
+  }
+
+  newMessage() {
+    this.dataservice.changeMessage("Hello from Sibling");
   }
 
   private options = {
@@ -78,10 +84,5 @@ export class StudentsPage {
     const sheetColumns = this.service.getParsedColumnsForSheet(this.options.settings.columns);
     const sheetRows = this.service.getAllStudents();
     this.exportService.exportJsonToExcel(sheetColumns, sheetRows, 'students', 'students');
-  }
-
-  newMessage() {
-    console.log('yes here');
-    this.sidemenu.changeMessage("Hello from Sibling");
   }
 }

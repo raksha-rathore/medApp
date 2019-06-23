@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SidemenuService } from '../common/service/sidemenu/sidemenu.service';
+import { DataService } from '../common/service/data/data.service';
 
 @Component({
   selector: 'app-sidemenu',
@@ -13,7 +14,7 @@ export class SidemenuPage implements OnInit {
   message:string;
   public imgURL = "../../assets/images/logo.png";
   
-  constructor(private sidemenu: SidemenuService) {
+  constructor(private sidemenu: SidemenuService, private dataservice: DataService) {
 
     this.sidemenu.getMessage().subscribe((message: string) => {console.log('message ==>', message); this.message = message;});
 
@@ -150,8 +151,7 @@ export class SidemenuPage implements OnInit {
 
   }
   ngOnInit() {
-
-    
+    this.dataservice.currentMessage.subscribe(message => this.message = message); 
   }
 
 
