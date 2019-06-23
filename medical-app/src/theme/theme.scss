@@ -307,7 +307,7 @@ select {
 .stepper li{
     list-style-type: none; 
     float: left; 
-    width: 33.33%; 
+    width: 33%; 
     position:relative; 
     text-align: center;
     cursor: pointer;
@@ -351,6 +351,14 @@ select {
 .stepper li.active + li::after{
     background-color:#0453A0; 
     border:1px solid #0453A0;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .stepper {
+        padding-left:0 !important;
+    }
+    .stepper li::after {
+        width: 70% !important;
+    }
 }
 .page-title{
     font-size:17px;
@@ -693,4 +701,23 @@ ion-title {
             margin: 0;
         }
     }
+}
+/* Dynamic css for three column pattern*/
+.three-col-pattern{
+    flex-direction: row;
+    clear:both;
+    flex-wrap:wrap;
+    float:left;
+}
+.three-col-pattern:nth-child(3n){
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.three-col-pattern:nth-child(3n-1){
+    padding-right:20px;
+}
+
+.three-col-pattern:nth-child(3n-2){
+    padding-left:20px;
 }
