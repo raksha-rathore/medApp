@@ -2,9 +2,9 @@
   <ion-grid class="p-30 mob-p-15">
     <ion-row class="full-width">
       <ul class="stepper full-width">
-        <li class="active" routerLink="./basic-info">Basic Info</li>
-        <li routerLink="./address-info">Address</li>
-        <li>Pic Upload</li>
+        <li routerLink="basic-info" [class.active]="router.url == '/student-profile/address-info' || router.url == '/student-profile/pic-upload'">Basic Info</li>
+        <li routerLink="address-info" [class.active]="router.url == '/student-profile/pic-upload'">Address</li>
+        <li routerLink="pic-upload">Pic Upload</li>
       </ul>
     </ion-row>
   </ion-grid>

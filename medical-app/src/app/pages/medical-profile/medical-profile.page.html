@@ -2,10 +2,10 @@
     <ion-grid class="p-30 mob-p-15">
       <ion-row class="full-width">
         <ul class="stepper full-width">
-          <li class="active" routerLink="./family-history">Family History</li>
-          <li routerLink="./birth-history">Birth History</li>
-          <li  routerLink="./immunization">Immunization</li>
-          <li  routerLink="./medical-surgical-info">Medical & Surgical</li>
+          <li routerLink="family-history" [class.active]="router.url == '/medical-profile/birth-history' || router.url == '/medical-profile/immunization' || router.url == '/medical-profile/medical-surgical-info'">Family History</li>
+          <li routerLink="birth-history" [class.active]="router.url == '/medical-profile/immunization' || router.url == '/medical-profile/medical-surgical-info'">Birth History</li>
+          <li routerLink="immunization" [class.active]="router.url == '/medical-profile/medical-surgical-info'">Immunization</li>
+          <li routerLink="medical-surgical-info">Medical & Surgical</li>
         </ul>
       </ion-row>
     </ion-grid>

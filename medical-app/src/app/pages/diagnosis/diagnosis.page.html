@@ -1,9 +1,9 @@
 <ion-content>
     <ion-row class="full-width">
         <ul class="stepper full-width">
-          <li class="active" routerLink="./medical-info">Present Medical Info</li>
-          <li routerLink="./anthropometric-info">Anthropometric Measurements</li>
-          <li  routerLink="./physical-examination-info">Physical Examination</li>
+          <li routerLink="medical-info" [class.active]="router.url == '/diagnosis/anthropometric-info' || router.url == '/diagnosis/physical-examination-info'">Present Medical Info</li>
+          <li routerLink="anthropometric-info" [class.active]="router.url == '/diagnosis/physical-examination-info'">Anthropometric Measurements</li>
+          <li routerLink="physical-examination-info">Physical Examination</li>
         </ul>
       </ion-row>
       <router-outlet></router-outlet>

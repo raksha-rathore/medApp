@@ -55,7 +55,7 @@ export class SidemenuPage implements OnInit {
           },
           {
             title: 'Picture',
-            url: '/student-profile/address',
+            url: '/student-profile/pic-upload',
             direct: 'forward',
             icon: ''
           },
