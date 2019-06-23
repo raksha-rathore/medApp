@@ -201,7 +201,7 @@ ion-textarea{
         --placeholder-color: #888;
         background: #f4f7fa;
         font-size: 14px;
-        height: 50px;
+        height: 55px;
         border-radius: .25rem;
         line-height: 1.5;
     }
@@ -307,11 +307,13 @@ select {
 .stepper li{
     list-style-type: none; 
     float: left; 
-    width: 33.33%; 
+    width: 33%; 
     position:relative; 
     text-align: center;
     cursor: pointer;
     font-size:12px;
+    outline:none;
+    border:none
 }
 .stepper li::before {
     content:counter(step); 
@@ -341,6 +343,7 @@ select {
 }
 .stepper li.active {
     color:#0453A0;
+    outline:none;
 }
 .stepper li.active::before {
     border-color:#0453A0;
@@ -349,11 +352,19 @@ select {
     background-color:#0453A0; 
     border:1px solid #0453A0;
 }
+@media (min-width: 320px) and (max-width: 480px) {
+    .stepper {
+        padding-left:0 !important;
+    }
+    .stepper li::after {
+        width: 70% !important;
+    }
+}
 .page-title{
     font-size:17px;
     background: white;
     border-bottom: 1px solid #f1f1f1;
-    padding: 20px 30px;
+    padding: 20px 30px 20px 20px;
     color:#000000;
     font-size: 17px;
     font-weight: 400;
@@ -461,7 +472,7 @@ ion-card{
     padding:0;
 }
 .custom-table > table > tbody {
-    height:calc(100vh - 350px);
+    height:calc(100vh - 380px);
     display:block;
     overflow:auto;
     width:100%;
@@ -469,6 +480,7 @@ ion-card{
 .custom-table > table > thead{
     width: 100% !important;
     display: block;
+    margin-top:30px;
 }
 /*pagination*/
 .ng2-smart-pagination-nav{
@@ -483,7 +495,8 @@ ion-card{
     display: flex;
     padding-left: 0;
     list-style: none;
-    border-radius: .25rem
+    border-radius: .25rem;
+    margin-top: 1rem;
 }
 
 .page-link {
@@ -645,11 +658,9 @@ ion-title {
 
     &:before {
         content: '';
-        position: absolute;
-        left: 10px;
-        top: 4px;
-        bottom: 4px;
-        width: 4px;
+        width: 3px;
+        margin-right: 10px;
+        height: 25px;
         background: var(--custom-color-blue);
     }
 }
@@ -690,4 +701,23 @@ ion-title {
             margin: 0;
         }
     }
+}
+/* Dynamic css for three column pattern*/
+.three-col-pattern{
+    flex-direction: row;
+    clear:both;
+    flex-wrap:wrap;
+    float:left;
+}
+.three-col-pattern:nth-child(3n){
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.three-col-pattern:nth-child(3n-1){
+    padding-right:20px;
+}
+
+.three-col-pattern:nth-child(3n-2){
+    padding-left:20px;
 }

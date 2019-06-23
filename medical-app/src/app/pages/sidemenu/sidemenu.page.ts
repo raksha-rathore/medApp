@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SidemenuService } from '../common/service/sidemenu/sidemenu.service';
 import { DataService } from '../common/service/data/data.service';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-sidemenu',
@@ -8,17 +9,13 @@ import { DataService } from '../common/service/data/data.service';
   styleUrls: ['./sidemenu.page.scss'],
 })
 export class SidemenuPage implements OnInit {
-  public appPages: any;
-  public staticPages: any;
-  public dynamicPages: any;
-  message:string;
-  public imgURL = "../../assets/images/logo.png";
-  
-  constructor(private sidemenu: SidemenuService, private dataservice: DataService) {
+  showMenu: any;
+  appPages: any;
+  imgURL: string;
+  message: string;
 
-    this.sidemenu.getMessage().subscribe((message: string) => {console.log('message ==>', message); this.message = message;});
-
-    this.staticPages = [
+  constructor(private router: Router, private dataservice: DataService) {
+    this.appPages = [
       {
         title: 'Dashboard',
         url: '/dashboard',
@@ -78,7 +75,7 @@ export class SidemenuPage implements OnInit {
             icon: ''
           },
           {
-            title: 'Picture',
+            title: 'Immunization',
             url: '/medical-profile/immunization',
             direct: 'forward',
             icon: ''
@@ -92,7 +89,7 @@ export class SidemenuPage implements OnInit {
         ]
       },
       {
-        title: 'Diagonisis',
+        title: 'Diagnosis',
         icon: 'pulse',
         children: [
           {
@@ -120,7 +117,7 @@ export class SidemenuPage implements OnInit {
         icon: 'pulse',
         children: [
           {
-            title: 'Medications',
+            title: 'Deworming Medicine',
             url: '/medications/deworming-medicine',
             direct: 'root',
             icon: ''
@@ -146,14 +143,42 @@ export class SidemenuPage implements OnInit {
         icon: 'medkit',
       }
     ];
-
-    this.appPages = this.staticPages;
-
+    // use this code if the ion toggle menu does not work when click on menu items.
+    /*this.router.events.subscribe(val => {
+      if (val instanceof NavigationEnd && window.innerWidth <= 992) {
+          this.hideSidebar();
+      }
+    });*/
   }
+
   ngOnInit() {
     this.dataservice.currentMessage.subscribe(message => this.message = message); 
+    this.showMenu = '';
+    this.imgURL = '../../assets/images/logo.png';
   }
 
+  /*hideSidebar() {
+    add logic here to hide side  navigation bar if the ion toggle node does not work
+    const dom: any = document.querySelector('ion-menu');
+    dom.classList.remove('show-menu');
+  }*/
 
+  onMenuClick(menuItem: object) {
+    this.showMenu = menuItem === this.showMenu ? '0' : menuItem;
+  }
 
+  isActive(menuItem: any): boolean {
+    const isActive = this.router.url === menuItem.url;
+    return ( isActive || this.hasActiveChild(menuItem));
+  }
+
+  hasActiveChild(menuItem: any): boolean {
+    let activeChild = [];
+    if (menuItem.children) {
+      activeChild = menuItem.children.filter(submenu => {
+        return ( this.router.url === submenu.url);
+      });
+    }
+    return (activeChild.length !== 0);
+  }
 }
