@@ -32,7 +32,7 @@
                   <ion-icon name="arrow-dropdown" *ngIf="showMenu === p"></ion-icon>
               </div>
             </ion-item>
-            <ion-list *ngIf="(showMenu === p || isActive(p))" class="sub-items">
+            <ion-list *ngIf="showMenu === p" class="sub-items">
               <ion-menu-toggle auto-hide="false" *ngFor="let sub of p.children">
               <ion-item  class="sub-item" [routerLink]="sub.url" routerDirection="root" routerLinkActive="active">
                 <ion-label>{{ sub.title }}</ion-label>
